@@ -1,0 +1,709 @@
+/* Bank Sync Page Styles */
+
+.bank-sync-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.bank-sync-hero {
+  background: linear-gradient(135deg, hsl(210 40% 96%) 0%, hsl(220 30% 94%) 100%);
+  padding: 6rem 0 4rem;
+  margin-top: 70px;
+}
+
+.bank-sync-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.bank-sync-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: hsl(var(--navy));
+}
+
+.bank-sync-breadcrumb a {
+  color: hsl(var(--navy));
+  text-decoration: none;
+}
+
+.bank-sync-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.bank-sync-breadcrumb span {
+  color: hsl(215 16% 50%);
+}
+
+.bank-sync-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.bank-sync-hero-text h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.bank-sync-hero-text p {
+  font-size: 1.125rem;
+  color: hsl(215 16% 40%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.bank-sync-email-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bank-sync-email-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid hsl(215 20% 85%);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.bank-sync-email-input:focus {
+  outline: none;
+  border-color: hsl(var(--teal));
+}
+
+.bank-sync-cta-btn {
+  padding: 1rem 2rem;
+  background: hsl(160 70% 40%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.bank-sync-cta-btn:hover {
+  background: hsl(160 70% 35%);
+}
+
+.bank-sync-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bank-sync-rating-text {
+  font-size: 0.875rem;
+  color: hsl(215 16% 40%);
+}
+
+.bank-sync-stars {
+  display: flex;
+  gap: 0.25rem;
+  color: hsl(45 100% 50%);
+}
+
+.bank-sync-capterra {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+}
+
+.bank-sync-hero-video {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bank-sync-video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(220 50% 30%) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.bank-sync-video-placeholder h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bank-sync-video-placeholder p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.bank-sync-play-btn {
+  width: 64px;
+  height: 64px;
+  background: hsl(160 70% 45%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.bank-sync-play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Why HouseSigma Section */
+.bank-sync-why {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bank-sync-why h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bank-sync-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.bank-sync-why-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bank-sync-why-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.bank-sync-why-icon.blue {
+  background: hsl(210 100% 95%);
+  color: hsl(210 100% 50%);
+}
+
+.bank-sync-why-icon.pink {
+  background: hsl(330 100% 95%);
+  color: hsl(330 80% 55%);
+}
+
+.bank-sync-why-icon.teal {
+  background: hsl(170 80% 92%);
+  color: hsl(170 80% 40%);
+}
+
+.bank-sync-why-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bank-sync-why-card p {
+  font-size: 0.95rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.bank-sync-features {
+  padding: 5rem 0;
+}
+
+.bank-sync-features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bank-sync-features-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 1rem;
+}
+
+.bank-sync-features-header p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+}
+
+.bank-sync-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.bank-sync-feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid hsl(215 20% 92%);
+}
+
+.bank-sync-feature-card.blue-border {
+  border-left: 4px solid hsl(210 100% 60%);
+}
+
+.bank-sync-feature-card.pink-border {
+  border-left: 4px solid hsl(330 80% 65%);
+}
+
+.bank-sync-feature-card.teal-border {
+  border-left: 4px solid hsl(var(--teal));
+}
+
+.bank-sync-feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bank-sync-feature-card p {
+  font-size: 0.95rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.bank-sync-feature-image {
+  width: 100%;
+  height: 200px;
+  background: hsl(210 40% 96%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(215 16% 60%);
+  font-size: 0.875rem;
+}
+
+.bank-sync-cta-center {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.bank-sync-cta-center .bank-sync-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Effect Section */
+.bank-sync-effect {
+  padding: 5rem 0;
+  background: white;
+}
+
+.bank-sync-effect-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.bank-sync-effect-text h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 1rem;
+}
+
+.bank-sync-effect-text p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.bank-sync-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.bank-sync-stat-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.bank-sync-stat-card.blue {
+  background: linear-gradient(135deg, hsl(210 100% 97%) 0%, hsl(210 80% 95%) 100%);
+}
+
+.bank-sync-stat-card.orange {
+  background: linear-gradient(135deg, hsl(30 100% 97%) 0%, hsl(30 90% 92%) 100%);
+}
+
+.bank-sync-stat-card.green {
+  background: linear-gradient(135deg, hsl(150 60% 95%) 0%, hsl(150 50% 90%) 100%);
+}
+
+.bank-sync-stat-card.purple {
+  background: linear-gradient(135deg, hsl(260 60% 97%) 0%, hsl(260 50% 93%) 100%);
+}
+
+.bank-sync-stat-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.bank-sync-stat-icon.blue {
+  color: hsl(210 100% 50%);
+}
+
+.bank-sync-stat-icon.orange {
+  color: hsl(30 100% 50%);
+}
+
+.bank-sync-stat-icon.green {
+  color: hsl(150 70% 40%);
+}
+
+.bank-sync-stat-icon.purple {
+  color: hsl(260 70% 55%);
+}
+
+.bank-sync-stat-card span {
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.bank-sync-stat-card strong {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+}
+
+.bank-sync-stats-note {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 0.75rem;
+  color: hsl(215 16% 60%);
+  margin-top: 0.5rem;
+}
+
+/* Testimonial Section */
+.bank-sync-testimonial {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bank-sync-testimonial h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bank-sync-testimonial-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bank-sync-testimonial-image {
+  width: 180px;
+  height: 220px;
+  background: hsl(210 40% 92%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bank-sync-testimonial-play {
+  width: 48px;
+  height: 48px;
+  background: hsl(160 70% 45%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.bank-sync-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bank-sync-quote-icon {
+  color: hsl(var(--teal));
+  margin-bottom: 1rem;
+}
+
+.bank-sync-testimonial-content blockquote {
+  font-size: 1.25rem;
+  color: hsl(var(--navy));
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.bank-sync-testimonial-author {
+  font-weight: 600;
+  color: hsl(var(--navy));
+}
+
+.bank-sync-testimonial-role {
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+}
+
+/* FAQ Section */
+.bank-sync-faq {
+  padding: 5rem 0;
+}
+
+.bank-sync-faq h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bank-sync-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.bank-sync-faq-item {
+  background: white;
+  border: 1px solid hsl(215 20% 92%);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.bank-sync-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bank-sync-faq-question h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  color: hsl(215 16% 50%);
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.bank-sync-faq-answer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* Explore Features Section */
+.bank-sync-explore {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bank-sync-explore-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bank-sync-explore-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bank-sync-explore-header p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+}
+
+.bank-sync-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bank-sync-explore-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid hsl(215 20% 92%);
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.bank-sync-explore-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.bank-sync-explore-card.highlighted {
+  background: hsl(var(--navy));
+}
+
+.bank-sync-explore-card.highlighted span {
+  color: white;
+}
+
+.bank-sync-explore-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-sync-explore-icon.blue {
+  background: hsl(210 100% 95%);
+  color: hsl(210 100% 50%);
+}
+
+.bank-sync-explore-icon.teal {
+  background: hsl(170 80% 92%);
+  color: hsl(170 80% 40%);
+}
+
+.bank-sync-explore-icon.purple {
+  background: hsl(260 60% 95%);
+  color: hsl(260 70% 55%);
+}
+
+.bank-sync-explore-icon.pink {
+  background: hsl(330 100% 95%);
+  color: hsl(330 80% 55%);
+}
+
+.bank-sync-explore-icon.green {
+  background: hsl(150 60% 92%);
+  color: hsl(150 70% 35%);
+}
+
+.bank-sync-explore-icon.orange {
+  background: hsl(30 100% 92%);
+  color: hsl(30 100% 45%);
+}
+
+.bank-sync-explore-card span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(var(--navy));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bank-sync-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bank-sync-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-sync-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-sync-effect-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bank-sync-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-sync-explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bank-sync-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .bank-sync-email-form {
+    flex-direction: column;
+  }
+
+  .bank-sync-testimonial-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bank-sync-testimonial-image {
+    margin: 0 auto;
+  }
+
+  .bank-sync-explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-sync-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-sync-stats-note {
+    grid-column: span 1;
+  }
+}
