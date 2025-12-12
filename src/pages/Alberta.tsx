@@ -22,7 +22,7 @@ const Alberta = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-       <Hero backgroundImage={albertaHero} />
+       <Hero  />
       <FilterBar />
       
       <PropertySection title="Newly Added to HouseSigma" properties={newlyAdded} />

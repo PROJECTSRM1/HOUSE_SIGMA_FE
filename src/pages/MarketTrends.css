@@ -55,8 +55,9 @@ nav,
   background: #ffffff;
   position: sticky;
   top: 72px; /* FIX: match navbar height */
-  z-index: 2000; /* raise z-index above charts */
+  z-index: 500;  /* raise z-index above charts */
   border-bottom: 1px solid #e5e7eb;
+
 }
 
 .market-filters {
