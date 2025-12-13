@@ -24,6 +24,10 @@ import Alberta from "./pages/Alberta";
 import MarketTrends from "./pages/MarketTrends";
 import Bookkeeping from "./pages/Bookkeeping";
 import FinancialReports from "./pages/Financialreports";
+import Aboutus from "./pages/Aboutus";
+import PressMedia from "./pages/PressMedia";
+import FAQ from "./pages/FAQ";
+import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
@@ -59,6 +63,18 @@ const App = () => (
             <Route path="/homes/british-columbia" element={<BritishColumbia />} />
             <Route path="/homes/alberta" element={<Alberta />} />
             
+            {/* Portfolio Routes */}
+            <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+            
+            {/* Company Routes */}
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/press" element={<PressMedia />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<ContactUs />} />
+
+
+            
+            <Route path="/blog" element={<EmptyPage title="Blog" />} />
 
              {/* Company Routes */}
             <Route path="/about" element={<EmptyPage title="About Us" />} />

@@ -13,7 +13,6 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="brandColumn">
             <div className="logo">
-
               <span className="brandName">HouseSigma</span>
             </div>
 
