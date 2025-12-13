@@ -71,16 +71,6 @@ const App = () => (
             <Route path="/press" element={<PressMedia />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<ContactUs />} />
-
-
-            
-            <Route path="/blog" element={<EmptyPage title="Blog" />} />
-
-             {/* Company Routes */}
-            <Route path="/about" element={<EmptyPage title="About Us" />} />
-            <Route path="/press" element={<EmptyPage title="Press & Media" />} />
-            <Route path="/faq" element={<EmptyPage title="FAQ" />} />
-            <Route path="/contact" element={<EmptyPage title="Contact Us" />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/market-trends" element={<MarketTrends />} />
 
