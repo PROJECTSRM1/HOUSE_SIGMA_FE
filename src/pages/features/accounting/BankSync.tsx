@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2, Shield, Zap, Play, ArrowRight, ChevronDown, 
   Clock, TrendingUp, Users, CheckCircle, Calculator, 
-  Home, FileText, MessageSquare, DollarSign, Sparkles
+  Home, FileText, MessageSquare, DollarSign, Sparkles,
+  Landmark, CreditCard, Receipt, CheckSquare
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -176,7 +177,7 @@ const BankSync = () => {
                 connecting your bank account or credit card to HouseSigma through Plaid.
               </p>
               <div className="bank-sync-feature-image">
-                [Bank Account Connection Image Placeholder]
+                <Landmark size={64} className="feature-icon blue" />
               </div>
             </motion.div>
             
@@ -193,7 +194,7 @@ const BankSync = () => {
                 in real-time, keeping your books accurate without manual work.
               </p>
               <div className="bank-sync-feature-image">
-                [Transaction Matching Image Placeholder]
+                <CheckSquare size={64} className="feature-icon pink" />
               </div>
             </motion.div>
             
@@ -210,7 +211,7 @@ const BankSync = () => {
                 into their correct categories.
               </p>
               <div className="bank-sync-feature-image">
-                [Categorization Image Placeholder]
+                <Receipt size={64} className="feature-icon teal" />
               </div>
             </motion.div>
             
@@ -227,7 +228,7 @@ const BankSync = () => {
                 every dollar with fewer mistakes and typos.
               </p>
               <div className="bank-sync-feature-image">
-                [Reconciliation Image Placeholder]
+                <CreditCard size={64} className="feature-icon blue" />
               </div>
             </motion.div>
           </div>
@@ -256,7 +257,7 @@ const BankSync = () => {
                 Delivering the features you need with the results you've been waiting for. 
                 Now that's smarter property management.
               </p>
-              <button className="bank-sync-cta-btn">
+              <button className="bank-sync-cta-btn bank-sync-effect-btn">
                 See It In Action <ArrowRight size={18} />
               </button>
             </motion.div>

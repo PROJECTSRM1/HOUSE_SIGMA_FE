@@ -1,0 +1,64 @@
+
+.section {
+  /* center and constrain content like the original site */
+  max-width: 1300px;        /* adjust to taste (1100 - 1300 is common) */
+  margin: 0 auto 3rem;      /* center horizontally and keep bottom spacing */
+  padding: 0 24px;          /* horizontal gutter on small screens */
+  box-sizing: border-box;
+}
+
+/* header/title/see more unchanged but included for completeness */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(var(--foreground));
+}
+
+.seeMore {
+  font-size: 0.875rem;
+  color: #1e4a7a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.seeMore:hover {
+  opacity: 0.8;
+}
+
+/* Grid: use minmax to maintain card width and let grid auto-fill centered columns */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  /* try to keep cards around 320-360px each, auto-fill columns and center them */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: center; /* ensures grid is centered within .section */
+}
+
+/* Breakpoint tuning if you want exact 2/3 columns */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  /* on very large screens limit the content by the .section max-width so you get visible side gaps */
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* keep 3 columns on desktop */
+  }
+}
+
+/* Optional: if you want slightly larger gutters on desktop */
+@media (min-width: 1200px) {
+  .section {
+    padding: 0 32px;
+  }
+}
+

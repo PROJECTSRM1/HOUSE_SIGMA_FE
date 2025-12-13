@@ -18,6 +18,13 @@ import CommunicationTools from "./pages/features/Resident/CommunicationTools";
 import RentersInsurance from "./pages/features/Resident/RentersInsurance";
 
 import { AuthModalProvider } from "./context/AuthModalContext";
+import Ontario from "./pages/Ontario";
+import BritishColumbia from "./pages/BritishColumbia";
+import Alberta from "./pages/Alberta";
+import MarketTrends from "./pages/MarketTrends";
+import Bookkeeping from "./pages/Bookkeeping";
+import FinancialReports from "./pages/Financialreports";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -46,14 +53,20 @@ const App = () => (
               <Route path="features/insurance" element ={<RentersInsurance />} />
               {/* Portfolio Routes */}
               <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+              
+               {/* Homes Routes */}
+            <Route path="/homes/ontario" element={<Ontario />} />
+            <Route path="/homes/british-columbia" element={<BritishColumbia />} />
+            <Route path="/homes/alberta" element={<Alberta />} />
+            
 
-              {/* Company Routes */}
-              <Route path="/about" element={<EmptyPage title="About Us" />} />
-              <Route path="/press" element={<EmptyPage title="Press & Media" />} />
-              <Route path="/faq" element={<EmptyPage title="FAQ" />} />
-              <Route path="/contact" element={<EmptyPage title="Contact Us" />} />
-              <Route path="/blog" element={<EmptyPage title="Blog" />} />
-              <Route path="/market-trends" element={<EmptyPage title="Market Trends" />} />
+             {/* Company Routes */}
+            <Route path="/about" element={<EmptyPage title="About Us" />} />
+            <Route path="/press" element={<EmptyPage title="Press & Media" />} />
+            <Route path="/faq" element={<EmptyPage title="FAQ" />} />
+            <Route path="/contact" element={<EmptyPage title="Contact Us" />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/market-trends" element={<MarketTrends />} />
 
               {/* Support Routes */}
               <Route path="/feedback" element={<EmptyPage title="Feedback" />} />

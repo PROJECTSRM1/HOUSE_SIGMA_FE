@@ -1,6 +1,8 @@
 import { Home, Facebook, Twitter, Linkedin, Smartphone } from "lucide-react";
 import "../styles/Footer.css";
 
+import appStoreImg from "/assets/apple-appstore.png";
+import googlePlayImg from "/assets/google-play.png";
 
 const Footer = () => {
   return (

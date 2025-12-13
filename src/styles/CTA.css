@@ -80,13 +80,26 @@
 
 /* CTA Button */
 .cta-button {
-  height: 44px !important;
-  padding: 0 24px !important;
-  background: #0EA385 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1e4a7a;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .cta-button:hover {
-  background: #0C8C70 !important;
+  background: #163a61;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 74, 122, 0.4);
 }
 
 /* Arrow Icon */
@@ -95,9 +108,7 @@
   height: 16px;
 }
 
-/* Footnote */
-.cta-footnote {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #64748B;
+  .cta-title {
+    font-size: 1.375rem;
+  }
 }
