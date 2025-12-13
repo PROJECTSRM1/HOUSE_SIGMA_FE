@@ -87,15 +87,15 @@
 }
 
 .step.active {
-  background: hsl(var(--teal));
+  background: #1e4a7a;
   color: white;
-  border-color: hsl(var(--teal));
+  border-color: #1e4a7a;
 }
 
 .step.completed {
-  background: hsl(var(--teal));
+  background: #1e4a7a;
   color: white;
-  border-color: hsl(var(--teal));
+  border-color: #1e4a7a;
 }
 
 .step-line {
@@ -105,7 +105,7 @@
 }
 
 .step-line.active {
-  background: hsl(var(--teal));
+  background: #1e4a7a;
 }
 
 /* Tabs */
@@ -140,11 +140,11 @@
 }
 
 .auth-tab.active {
-  color: hsl(var(--teal));
+  color: #1e4a7a;
 }
 
 .auth-tab.active::after {
-  background: hsl(var(--teal));
+  background: #1e4a7a;
 }
 
 /* Form */
@@ -179,8 +179,8 @@
 
 .form-input:focus {
   outline: none;
-  border-color: hsl(var(--teal));
-  box-shadow: 0 0 0 3px hsl(var(--teal) / 0.1);
+  border-color: #1e4a7a;
+  box-shadow: 0 0 0 3px rgba(30, 74, 122, 0.1);
 }
 
 .form-input::placeholder {
@@ -192,7 +192,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: hsl(var(--primary-foreground));
-  background: hsl(var(--teal));
+  background: #1e4a7a;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -201,7 +201,7 @@
 }
 
 .auth-submit:hover {
-  background: hsl(var(--teal-dark));
+  background: #163a61;
 }
 
 .auth-submit:disabled {
@@ -216,13 +216,13 @@
 
 .auth-forgot a {
   font-size: 0.9375rem;
-  color: hsl(var(--teal));
+  color: #1e4a7a;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .auth-forgot a:hover {
-  color: hsl(var(--teal-dark));
+  color: #163a61;
 }
 
 .auth-divider {
@@ -269,7 +269,7 @@
 
 .auth-social-btn:hover {
   background: hsl(var(--secondary));
-  border-color: hsl(var(--teal) / 0.3);
+  border-color: rgba(30, 74, 122, 0.3);
 }
 
 .auth-social-btn svg {
@@ -285,7 +285,7 @@
 }
 
 .auth-switch button {
-  color: hsl(var(--teal));
+  color: #1e4a7a;
   background: none;
   border: none;
   cursor: pointer;
@@ -294,7 +294,7 @@
 }
 
 .auth-switch button:hover {
-  color: hsl(var(--teal-dark));
+  color: #163a61;
 }
 
 /* Reset Password Message */
@@ -338,8 +338,8 @@
 
 .otp-input:focus {
   outline: none;
-  border-color: hsl(var(--teal));
-  box-shadow: 0 0 0 3px hsl(var(--teal) / 0.1);
+  border-color: #1e4a7a;
+  box-shadow: 0 0 0 3px rgba(30, 74, 122, 0.1);
 }
 
 .otp-message {
@@ -355,7 +355,7 @@
 }
 
 .otp-resend button {
-  color: hsl(var(--teal));
+  color: #1e4a7a;
   background: none;
   border: none;
   cursor: pointer;
@@ -365,7 +365,7 @@
 }
 
 .otp-resend button:hover {
-  color: hsl(var(--teal-dark));
+  color: #163a61;
 }
 
 @media (max-width: 480px) {

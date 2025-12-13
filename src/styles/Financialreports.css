@@ -33,7 +33,7 @@
 }
 
 .reports-breadcrumb a:hover {
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
   text-decoration: underline;
 }
 
@@ -81,12 +81,12 @@
 
 .reports-email-input:focus {
   outline: none;
-  border-color: hsl(220 70% 50%);
+  border-color: #1e4a7a;
 }
 
 .reports-cta-btn {
   padding: 1rem 2rem;
-  background: hsl(160 70% 40%);
+  background: #1e4a7a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -101,7 +101,7 @@
 }
 
 .reports-cta-btn:hover {
-  background: hsl(220 70% 45%);
+  background: #163a61;
   transform: translateY(-2px);
 }
 
@@ -128,8 +128,8 @@
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background: hsl(220 70% 95%);
-  color: hsl(220 70% 40%);
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
   border-radius: 6px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -197,7 +197,7 @@
 }
 
 .stat-icon.blue {
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
 }
 
 .stat-label {
@@ -224,7 +224,7 @@
 }
 
 .chart-placeholder {
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
   opacity: 0.5;
 }
 
@@ -277,8 +277,8 @@
 }
 
 .reports-why-icon.teal {
-  background: hsl(170 80% 92%);
-  color: hsl(170 80% 40%);
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .reports-why-icon.purple {
@@ -349,7 +349,7 @@
 }
 
 .reports-feature-card.teal-border {
-  border-left: 4px solid hsl(170 80% 50%);
+  border-left: 4px solid #1e4a7a;
 }
 
 .reports-feature-card.purple-border {
@@ -373,7 +373,7 @@
 }
 
 .feature-main-icon.teal {
-  color: hsl(170 80% 40%);
+  color: #1e4a7a;
 }
 
 .feature-main-icon.purple {
@@ -414,7 +414,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
 }
 
 .feature-visual-demo span {
@@ -561,7 +561,7 @@
 .reports-testimonial-image {
   width: 180px;
   height: 220px;
-  background: linear-gradient(135deg, hsl(220 70% 95%) 0%, hsl(220 60% 90%) 100%);
+  background: linear-gradient(135deg, rgba(30, 74, 122, 0.1) 0%, rgba(30, 74, 122, 0.05) 100%);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -577,7 +577,7 @@
   height: 80px;
   background: white;
   border-radius: 50%;
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
 }
 
 .reports-testimonial-content {
@@ -587,7 +587,7 @@
 }
 
 .reports-quote-icon {
-  color: hsl(220 70% 50%);
+  color: #1e4a7a;
   margin-bottom: 1rem;
 }
 
@@ -722,8 +722,8 @@
 }
 
 .reports-explore-card.highlighted {
-  background: hsl(220 70% 50%);
-  border-color: hsl(220 70% 50%);
+  background: #1e4a7a;
+  border-color: #1e4a7a;
 }
 
 .reports-explore-card.highlighted span {
@@ -751,8 +751,8 @@
 }
 
 .reports-explore-icon.teal {
-  background: hsl(170 80% 92%);
-  color: hsl(170 80% 40%);
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .reports-explore-icon.purple {

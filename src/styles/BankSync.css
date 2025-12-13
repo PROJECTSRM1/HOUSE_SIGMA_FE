@@ -78,12 +78,12 @@
 
 .bank-sync-email-input:focus {
   outline: none;
-  border-color: hsl(var(--teal));
+  border-color: #1e4a7a;
 }
 
 .bank-sync-cta-btn {
   padding: 1rem 2rem;
-  background: hsl(160 70% 40%);
+  background: #1e4a7a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -92,10 +92,13 @@
   cursor: pointer;
   transition: background 0.3s;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .bank-sync-cta-btn:hover {
-  background: hsl(160 70% 35%);
+  background: #163a61;
 }
 
 .bank-sync-rating {
@@ -155,7 +158,7 @@
 .bank-sync-play-btn {
   width: 64px;
   height: 64px;
-  background: hsl(160 70% 45%);
+  background: #1e4a7a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -217,8 +220,8 @@
 }
 
 .bank-sync-why-icon.teal {
-  background: hsl(170 80% 92%);
-  color: hsl(170 80% 40%);
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .bank-sync-why-card h3 {
@@ -278,7 +281,7 @@
 }
 
 .bank-sync-feature-card.teal-border {
-  border-left: 4px solid hsl(var(--teal));
+  border-left: 4px solid #1e4a7a;
 }
 
 .bank-sync-feature-card h3 {
@@ -307,15 +310,25 @@
   font-size: 0.875rem;
 }
 
+.feature-icon {
+  opacity: 0.7;
+}
+
+.feature-icon.blue {
+  color: hsl(210 100% 50%);
+}
+
+.feature-icon.pink {
+  color: hsl(330 80% 55%);
+}
+
+.feature-icon.teal {
+  color: #1e4a7a;
+}
+
 .bank-sync-cta-center {
   text-align: center;
   margin-top: 3rem;
-}
-
-.bank-sync-cta-center .bank-sync-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 /* Effect Section */
@@ -343,6 +356,13 @@
   color: hsl(215 16% 45%);
   line-height: 1.6;
   margin-bottom: 2rem;
+}
+
+.bank-sync-effect-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  width: auto !important;
 }
 
 .bank-sync-stats-grid {
@@ -456,7 +476,7 @@
 .bank-sync-testimonial-play {
   width: 48px;
   height: 48px;
-  background: hsl(160 70% 45%);
+  background: #1e4a7a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -472,7 +492,7 @@
 }
 
 .bank-sync-quote-icon {
-  color: hsl(var(--teal));
+  color: #1e4a7a;
   margin-bottom: 1rem;
 }
 
@@ -618,8 +638,8 @@
 }
 
 .bank-sync-explore-icon.teal {
-  background: hsl(170 80% 92%);
-  color: hsl(170 80% 40%);
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .bank-sync-explore-icon.purple {

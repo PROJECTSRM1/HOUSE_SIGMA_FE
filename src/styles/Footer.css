@@ -1,6 +1,6 @@
 /* MAIN FOOTER WRAPPER */
 .footer {
-  background-color:hsl(var(--teal));
+  background-color:#1e4a7a;
   color: #ffffff;
   padding: 1rem 0 0.8rem 0; /* reduced for tight look */
   font-family: "Inter", sans-serif;
