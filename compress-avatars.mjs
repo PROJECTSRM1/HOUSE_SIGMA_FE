@@ -9,12 +9,12 @@ const __dirname = process.cwd();
 ===================================================== */
 
 // Input folder (your original images)
-const INPUT_DIR = path.join(__dirname, "src", "assets", "Images", "Images");
+const INPUT_DIR = path.join(__dirname, "public", "assets", "Images");
 
 // Output folder (optimized images)
 const OUTPUT_DIR = path.join(
   __dirname,
-  "src",
+  "public",
   "assets",
   "images_optimized"
 );
