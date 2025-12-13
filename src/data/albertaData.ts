@@ -196,7 +196,7 @@ export const highGrowth: Property[] = [
   },
   {
     id: 11,
-    image: "/assets/alberta_Files/alberta11.jpg",
+    image: "/assets/alberta_Files/alberta.jpg",
     price: "$1,195,000",
     address: "1731 12 Avenue NW",
     location: "Calgary - Hounsfield Heights",
@@ -388,7 +388,7 @@ export const justSold: Property[] = [
   },
   {
     id: 21,
-    image: "/c/assets/alberta_Files/alberta21.jpg",
+    image: "/assets/alberta_Files/alberta21.jpg",
     price: "$399,900",
     soldFor: "$385,000",
     status: "Sold",

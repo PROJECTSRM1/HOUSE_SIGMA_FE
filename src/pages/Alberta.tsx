@@ -17,12 +17,13 @@ import {
   highReturns,
   justSold  
 } from "@/data/albertaData";
+import AbHero from "@/components/Ab-hero";
 
 const Alberta = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-       <Hero  />
+       <AbHero  />
       <FilterBar />
       
       <PropertySection title="Newly Added to HouseSigma" properties={newlyAdded} />

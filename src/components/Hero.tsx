@@ -53,7 +53,7 @@ const Hero = () => {
       <div className={styles.content}>
         <div className={styles.textContent}>
           <h1 className={styles.title}>
-            Make Better<br />Real Estate Decisions 
+            Make Better<br />Real Estate Decisions in Ontario
           </h1>
           <p className={styles.subtitle}>
             Browse 22 years of sales history.<br />
