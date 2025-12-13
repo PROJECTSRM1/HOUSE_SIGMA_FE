@@ -23,7 +23,7 @@
 
 .seeMore {
   font-size: 0.875rem;
-  color: hsl(var(--primary));
+  color: #1e4a7a;
   text-decoration: none;
   transition: opacity 0.2s;
 }

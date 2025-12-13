@@ -104,7 +104,7 @@ nav,
 }
 
 .tab-btn.active {
-  background: #1aa9c3;
+  background:#1e4a7a;
   color: #ffffff;
   font-weight: 600;
 }
@@ -312,7 +312,7 @@ nav,
 }
 
 .contact-form-submit-button {
-  background: #1aa9c3;
+  background: #1e4a7a;
   border: none;
   padding: 12px;
   color: #fff;
@@ -323,7 +323,7 @@ nav,
 }
 
 .contact-form-submit-button:hover {
-  background: #138a9f;
+  background: #1e4a7a
 }
 
 /* ============================================================
