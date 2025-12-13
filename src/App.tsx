@@ -15,7 +15,10 @@ import Alberta from "./pages/Alberta";
 import MarketTrends from "./pages/MarketTrends";
 import Bookkeeping from "./pages/Bookkeeping";
 import FinancialReports from "./pages/Financialreports";
-
+import Aboutus from "./pages/Aboutus";
+import PressMedia from "./pages/PressMedia";
+import FAQ from "./pages/FAQ";
+import ContactUs from "./pages/ContactUs";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -45,10 +48,13 @@ const App = () => (
             <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
             
             {/* Company Routes */}
-            <Route path="/about" element={<EmptyPage title="About Us" />} />
-            <Route path="/press" element={<EmptyPage title="Press & Media" />} />
-            <Route path="/faq" element={<EmptyPage title="FAQ" />} />
-            <Route path="/contact" element={<EmptyPage title="Contact Us" />} />
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/press" element={<PressMedia />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<ContactUs />} />
+
+
+            
             <Route path="/blog" element={<EmptyPage title="Blog" />} />
             <Route path="/market-trends" element={<MarketTrends />} />
             

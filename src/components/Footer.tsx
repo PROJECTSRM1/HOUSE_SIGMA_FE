@@ -1,7 +1,5 @@
 import { Home, Facebook, Twitter, Linkedin, Smartphone } from "lucide-react";
 import "../styles/Footer.css";
-import appStoreImg from "../assets/apple-appstore.png";
-import googlePlayImg from "../assets/google-play.png";
 
 const Footer = () => {
   return (
@@ -12,7 +10,6 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="brandColumn">
             <div className="logo">
-
               <span className="brandName">HouseSigma</span>
             </div>
 
@@ -75,12 +72,12 @@ const Footer = () => {
 
             <div className="appButtons">
               <img
-                src={appStoreImg}
+                src="/assets/apple-appstore.png"
                 alt="Download on the App Store"
                 className="storeImg"
               />
               <img
-                src={googlePlayImg}
+                src="/assets/google-play.png"
                 alt="Get it on Google Play"
                 className="storeImg"
               />

@@ -6,7 +6,7 @@ import StatsChart from "@/components/StatsChart";
 import Footer from "@/components/Footer";
 import CityLinks from "@/components/CityLinks";
 import AlbertaDisclaimer from "@/components/AlbertaDisclaimer";
-import albertaHero from "@/assets/alberta_Files/alberta.jpg";
+import albertaHero from "/assets/alberta_Files/alberta.jpg";
 
 import {
   newlyAdded,
