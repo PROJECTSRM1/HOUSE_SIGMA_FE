@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
+/* =========================================================
+   BASE THEME VARIABLES
+========================================================= */
 @layer base {
   :root {
+    /* Core */
     --background: 0 0% 100%;
     --foreground: 220 40% 13%;
 
@@ -36,23 +40,67 @@
 
     --radius: 0.5rem;
 
-    /* Custom colors */
+    /* =====================================================
+       BRAND COLORS
+    ===================================================== */
     --navy: 220 40% 13%;
     --navy-light: 220 30% 25%;
+
     --teal: 168 76% 32%;
     --teal-light: 168 65% 45%;
     --teal-dark: 168 80% 25%;
+
+    --soft: 210 40% 98%;
+    --slate: 215 16% 47%;
+    --slate-light: 215 20% 65%;
+
+    /* =====================================================
+       ACCENT COLORS (USED BY MAINTENANCE.CSS)
+    ===================================================== */
+
+    /* Blue */
+    --accent-blue: 210 100% 50%;
+    --accent-blue-light: 210 100% 95%;
+    --accent-blue-icon: 210 100% 50%;
+
+    /* Green */
+    --accent-green: 150 70% 45%;
+    --accent-green-light: 150 60% 95%;
+    --accent-green-icon: 150 70% 35%;
+
+    /* Mint */
+    --accent-mint: 168 76% 32%;
+    --accent-mint-icon: 168 76% 32%;
+
+    /* Purple */
+    --accent-purple: 260 70% 55%;
+    --accent-purple-light: 260 60% 95%;
+
+    /* Pink */
+    --accent-pink: 330 80% 55%;
+    --accent-pink-icon: 330 80% 55%;
+
+    /* Orange */
+    --accent-orange: 27 96% 61%;
+
+    /* =====================================================
+       GRADIENT SUPPORT
+    ===================================================== */
     --sky-gradient-start: 200 80% 97%;
     --sky-gradient-end: 200 60% 94%;
-    --orange: 27 96% 61%;
-    --orange-hover: 27 96% 55%;
 
-    /* Shadows */
+    /* =====================================================
+       SHADOWS
+    ===================================================== */
     --shadow-sm: 0 1px 2px 0 hsl(220 40% 13% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 40% 13% / 0.1), 0 2px 4px -2px hsl(220 40% 13% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(220 40% 13% / 0.1), 0 4px 6px -4px hsl(220 40% 13% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(220 40% 13% / 0.1), 0 8px 10px -6px hsl(220 40% 13% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(220 40% 13% / 0.1),
+                 0 2px 4px -2px hsl(220 40% 13% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 40% 13% / 0.1),
+                 0 4px 6px -4px hsl(220 40% 13% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(220 40% 13% / 0.1),
+                 0 8px 10px -6px hsl(220 40% 13% / 0.1);
 
+    /* Sidebar (optional) */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -63,6 +111,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* =====================================================
+     DARK MODE
+  ===================================================== */
   .dark {
     --background: 220 40% 8%;
     --foreground: 210 40% 98%;
@@ -82,49 +133,75 @@
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 27 96% 61%;
-    --accent-foreground: 220 40% 8%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 168 65% 45%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --soft: 220 30% 12%;
+    --slate: 215 20% 65%;
+    --slate-light: 215 20% 75%;
+
+    --accent-blue: 210 100% 60%;
+    --accent-blue-light: 210 60% 25%;
+    --accent-blue-icon: 210 100% 60%;
+
+    --accent-green: 150 60% 45%;
+    --accent-green-light: 150 40% 25%;
+    --accent-green-icon: 150 60% 45%;
+
+    --accent-mint: 168 65% 45%;
+    --accent-mint-icon: 168 65% 45%;
+
+    --accent-purple: 260 60% 65%;
+    --accent-purple-light: 260 40% 25%;
+
+    --accent-pink: 330 70% 65%;
+    --accent-pink-icon: 330 70% 65%;
+
+    --accent-orange: 27 90% 60%;
   }
 }
 
+/* =========================================================
+   BASE STYLES
+========================================================= */
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 }
 
+/* =========================================================
+   UTILITIES
+========================================================= */
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--sky-gradient-start)) 0%, hsl(var(--sky-gradient-end)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sky-gradient-start)) 0%,
+      hsl(var(--sky-gradient-end)) 100%
+    );
   }
-  
+
   .gradient-section {
-    background: linear-gradient(180deg, hsl(var(--sky-gradient-start)) 0%, hsl(0 0% 100%) 100%);
+    background: linear-gradient(
+      180deg,
+      hsl(var(--sky-gradient-start)) 0%,
+      hsl(0 0% 100%) 100%
+    );
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--teal-light)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--teal)) 0%,
+      hsl(var(--teal-light)) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
