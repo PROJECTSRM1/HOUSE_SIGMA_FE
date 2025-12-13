@@ -23,6 +23,7 @@ import type { PropertyListing as MockPropertyListing } from '@/data/mockData';
 // page-local CSS (file placed next to this component)
 import './BritishColumbia.css';
 import CityLinks from "@/components/CityLinks";
+import BcHero from "@/components/Bc-hero";
 
 /** Convert price string -> number (e.g. "$1,200,000" -> 1200000) */
 const parsePriceToNumber = (p?: string | number): number => {
@@ -67,7 +68,7 @@ const justSoldListings = (justSold ?? []).map(toListing);
 const BritishColumbia: React.FC = () => {
   return (
     <div className="min-h-screen">
-     <Hero />
+     <BcHero />
      <Navbar />
        <FilterBar />
         <PropertySection title="Newly Listed" properties={newlyAddedListings} />

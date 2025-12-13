@@ -1,0 +1,1212 @@
+:root {
+  --rc-white: #ffffff;
+  --rc-black: #0f172a;
+
+  /* PRIMARY (same as Owner Portal Login button) */
+  --rc-primary: #1e4a7a;
+  --rc-primary-dark: #0f2744;
+  --rc-primary-light: #e8f1fb;
+  --rc-primary-foreground: #ffffff;
+
+  /* Text */
+  --rc-navy: #0f172a;
+  --rc-slate: #64748b;
+  --rc-slate-light: #94a3b8;
+
+  /* Backgrounds */
+  --rc-soft: #f8fafc;
+  --rc-muted: #f1f5f9;
+  --rc-border: #e2e8f0;
+
+  /* Accent blues */
+  --rc-blue: #dbeafe;
+  --rc-blue-icon: #3b82f6;
+
+  /* Supporting accents */
+  --rc-purple: #ede9fe;
+  --rc-purple-icon: #8b5cf6;
+  --rc-orange: #ffedd5;
+  --rc-orange-icon: #f97316;
+  --rc-yellow: #fbbf24;
+
+  /* Status */
+  --rc-success: #3b82f6;
+  --rc-warning: #f59e0b;
+  --rc-error: #ef4444;
+}
+
+
+.rental-page {
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background: var(--rc-white);
+  color: var(--rc-black);
+}
+
+/* Hero Section */
+.rental-hero {
+ background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 7rem 0 4rem;
+}
+
+.rental-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.rental-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+  margin-bottom: 2rem;
+}
+
+.rental-breadcrumb a {
+  color: var(--rc-slate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.rental-breadcrumb a:hover {
+  color: var(--rc-navy);
+}
+
+.rental-breadcrumb .current {
+  color: var(--rc-navy);
+  font-weight: 500;
+}
+
+.rental-hero-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .rental-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rental-hero-badge {
+  background: var(--rc-brand-soft);
+  color: var(--rc-brand);
+}
+
+.rental-hero-badge .badge-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rental-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--rc-navy);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .rental-hero-title {
+    font-size: 3rem;
+  }
+}
+
+.rental-hero-title .gradient {
+  background: linear-gradient(
+    135deg,
+    var(--rc-primary),
+    var(--rc-blue-icon)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.rental-hero-text {
+  font-size: 1.125rem;
+  color: var(--rc-slate);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Email Form */
+.rental-email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .rental-email-form {
+    flex-direction: row;
+  }
+}
+
+.rental-email-form.cta {
+  max-width: 28rem;
+  margin: 0 auto 1.5rem;
+}
+
+.rental-email-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.rental-email-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--rc-slate);
+}
+
+.rental-email-input-wrapper input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  font-size: 1rem;
+  border: 1px solid var(--rc-border);
+  border-radius: 0.5rem;
+  background: var(--rc-white);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rental-email-input-wrapper input:focus {
+  border-color: var(--rc-navy);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.rental-email-btn {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--rc-primary-foreground);
+  background: var(--rc-navy);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.rental-email-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Rating */
+.rental-rating {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.rental-rating-stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.rental-rating-stars .star {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--rc-yellow);
+  fill: var(--rc-yellow);
+}
+
+.rental-rating-text {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+}
+
+.rental-rating-text .strong {
+  font-weight: 600;
+  color: var(--rc-navy);
+}
+
+.rental-rating-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--rc-border);
+}
+
+.rental-rating-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rc-navy);
+}
+
+.rental-rating-sub {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+}
+
+/* Hero Card */
+.rental-hero-card {
+  position: relative;
+  background: var(--rc-white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--rc-border);
+}
+
+.rental-hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.rental-hero-card-header h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--rc-navy);
+}
+
+.rental-hero-card-header .card-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--rc-slate);
+}
+
+.rental-hero-card-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rental-hero-card-info .info-item {
+  background: var(--rc-muted);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.rental-hero-card-info .label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+  margin-bottom: 0.25rem;
+}
+
+.rental-hero-card-info .value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--rc-navy);
+}
+
+.rental-hero-card-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rental-hero-card-details > div {
+  text-align: center;
+}
+
+.rental-hero-card-details .detail-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+  margin-bottom: 0.25rem;
+}
+
+.rental-hero-card-details .detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--rc-navy);
+}
+
+.rental-hero-card-details .detail-value.success {
+  color: var(--rc-success);
+}
+
+.rental-hero-card-details .detail-value.warning {
+  color: var(--rc-warning);
+}
+
+.rental-hero-card-details .detail-value.error {
+  color: var(--rc-error);
+}
+
+.rental-hero-chart {
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-border);
+}
+
+.rental-hero-chart .chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.rental-hero-chart .chart-label {
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+}
+
+.rental-hero-chart .chart-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rc-success);
+}
+
+.rental-hero-chart .chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.375rem;
+  height: 4rem;
+}
+
+.rental-hero-chart .bar {
+  flex: 1;
+  background: var(--rc-muted);
+  border-radius: 0.25rem 0.25rem 0 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.rental-hero-chart .bar > div { 
+    width: 100%; 
+    background: linear-gradient(to top, #1e4a7a 0%, #1e4a7a 100%); 
+    border-radius: 0.25rem 0.25rem 0 0; 
+    transition: height 0.3s ease; 
+}
+
+
+/* Why Section */
+.rental-why {
+  background: var(--rc-white);
+  padding: 5rem 0;
+}
+
+.rental-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--rc-navy);
+  margin-bottom: 3rem;
+}
+
+.rental-section-title.center {
+  text-align: center;
+}
+
+.rental-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .rental-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .rental-why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rental-why-card {
+  background: var(--rc-soft);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rental-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.rental-why-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.rental-why-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.rental-why-icon.green {
+  background: var(--rc-green);
+  color: var(--rc-navy);
+}
+
+.rental-why-icon.blue {
+  background: var(--rc-blue);
+  color: var(--rc-blue-icon);
+}
+
+.rental-why-icon.purple {
+  background: var(--rc-purple);
+  color: var(--rc-purple-icon);
+}
+
+.rental-why-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--rc-navy);
+}
+
+.rental-why-text {
+  font-size: 0.9375rem;
+  color: var(--rc-slate);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.rental-features {
+  padding: 5rem 0;
+  background: #f7f9fc;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.rental-features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.rental-features-subtitle {
+  font-size: 1rem;
+  color: var(--rc-slate);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.rental-features-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .rental-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rental-feature-card {
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.rental-feature-card.white {
+  background: var(--rc-white);
+  border: 1px solid var(--rc-border);
+}
+
+.rental-feature-card.blue {
+  background: rgba(219, 234, 254, 0.5);
+}
+
+.rental-feature-card.purple {
+  background: rgba(237, 233, 254, 0.5);
+}
+
+.rental-feature-card.green {
+  background: rgba(220, 252, 231, 0.6);
+}
+
+.rental-feature-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rental-feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rental-feature-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.rental-feature-icon.green {
+  background: var(--rc-green);
+  color: var(--rc-navy);
+}
+
+.rental-feature-icon.blue {
+  background: var(--rc-blue);
+  color: var(--rc-blue-icon);
+}
+
+.rental-feature-icon.purple {
+  background: var(--rc-purple);
+  color: var(--rc-purple-icon);
+}
+
+.rental-feature-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--rc-navy);
+}
+
+.rental-feature-sub {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+}
+
+.rental-feature-text {
+  color: var(--rc-slate);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.rental-feature-preview {
+  background: var(--rc-white);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.rental-feature-preview.muted {
+  background: var(--rc-muted);
+}
+
+.rental-feature-preview .preview-title {
+  font-weight: 600;
+  color: var(--rc-navy);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.rental-feature-preview .preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Tenant Preview */
+.preview-tenant {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--rc-muted);
+  border-radius: 0.5rem;
+}
+
+.tenant-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e4a7a 0%, #1e4a7a 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.tenant-info {
+  flex: 1;
+}
+
+.tenant-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--rc-navy);
+}
+
+.tenant-unit {
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+}
+
+.tenant-amount {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rc-navy);
+}
+
+.tenant-status {
+  font-size: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.tenant-status.active {
+  background: var(--rc-green);
+  color: var(--rc-navy);
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem;
+  background: var(--rc-muted);
+  border-radius: 0.5rem;
+}
+
+.method-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.method-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--rc-blue-icon);
+}
+
+.method-type {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--rc-navy);
+}
+
+.method-fee {
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+}
+
+.method-badge {
+  font-size: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--rc-green);
+  color: var(--rc-navy);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* Timeline */
+.reminder-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.timeline-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--rc-purple);
+  color: var(--rc-purple-icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timeline-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.timeline-day {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rc-navy);
+  margin-bottom: 0.125rem;
+}
+
+.timeline-message {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+}
+
+/* Report List */
+.report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.report-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--rc-white);
+  border-radius: 0.5rem;
+}
+
+.report-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--rc-green);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rc-navy);
+  flex-shrink: 0;
+}
+
+.report-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.report-info {
+  flex: 1;
+}
+
+.report-name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--rc-navy);
+}
+
+.report-meta {
+  font-size: 0.6875rem;
+  color: var(--rc-slate);
+}
+
+.report-download {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  background: var(--rc-green);
+  color: var(--rc-navy);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.report-download:hover {
+  opacity: 0.8;
+}
+
+.report-download svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rental-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.rental-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--rc-primary-foreground);
+  background: var(--rc-navy);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.rental-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.rental-btn-primary.sm {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.rental-btn-primary svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Stats Section */
+.rental-stats {
+  padding: 5rem 0;
+  background: var(--rc-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.rental-stats-grid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .rental-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rental-stats-text {
+  font-size: 1.125rem;
+  color: var(--rc-slate);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.rental-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.rental-stat-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.rental-stat-card.blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.rental-stat-card.green {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.rental-stat-card.purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+}
+
+.rental-stat-card.orange {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+.rental-stat-card .stat-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.rental-stat-card .stat-icon.blue {
+  color: var(--rc-blue-icon);
+}
+
+.rental-stat-card .stat-icon.green {
+  color: var(--rc-navy);
+}
+
+.rental-stat-card .stat-icon.purple {
+  color: var(--rc-purple-icon);
+}
+
+.rental-stat-card .stat-icon.orange {
+  color: var(--rc-orange-icon);
+}
+
+.rental-stat-card .stat-label {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+  margin-bottom: 0.25rem;
+}
+
+.rental-stat-card .stat-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--rc-navy);
+}
+
+@media (min-width: 768px) {
+  .rental-stat-card .stat-value {
+    font-size: 1.875rem;
+  }
+}
+
+.rental-stat-card .stat-note {
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+}
+
+.rental-stats-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--rc-slate);
+  margin-top: 2rem;
+}
+
+/* How It Works Section */
+.rental-how {
+  padding: 5rem 0;
+  background: var(--rc-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.rental-how-subtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--rc-slate);
+  margin-bottom: 3rem;
+}
+
+.rental-how-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .rental-how-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.rental-how-card {
+  position: relative;
+  background: var(--rc-soft);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.rental-how-number {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e4a7a 0%, #1e4a7a 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.rental-how-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 1.25rem;
+}
+
+.rental-how-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.rental-how-icon.green {
+  background: var(--rc-green);
+  color: var(--rc-navy);
+}
+
+.rental-how-icon.blue {
+  background: var(--rc-blue);
+  color: var(--rc-blue-icon);
+}
+
+.rental-how-icon.purple {
+  background: var(--rc-purple);
+  color: var(--rc-purple-icon);
+}
+
+.rental-how-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--rc-navy);
+}
+
+.rental-how-text {
+  font-size: 0.9375rem;
+  color: var(--rc-slate);
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.rental-faq {
+  padding: 5rem 0;
+  background: #f7f9fc;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.rental-faq-grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .rental-faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rental-faq-item {
+  background: var(--rc-white);
+  border: 1px solid var(--rc-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.rental-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rental-faq-question:hover {
+  background: rgba(241, 245, 249, 0.5);
+}
+
+.rental-faq-question-text {
+  font-weight: 500;
+  color: var(--rc-navy);
+  padding-right: 1rem;
+}
+
+.rental-faq-arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--rc-slate);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.rental-faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.rental-faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--rc-slate);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.rental-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.rental-cta-content {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.rental-cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--op-navy);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .rental-cta-title {
+    font-size: 2.5rem;
+  }
+}
+
+.rental-cta-text {
+  font-size: 1.125rem;
+  color: var(--rc-slate);
+  margin-bottom: 2rem;
+}
+
+.rental-cta-btn {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--rc-navy);
+  background: var(--rc-white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.rental-cta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.rental-cta-note {
+  font-size: 0.875rem;
+  color: var(--rc-slate);
+  margin-top: 1rem;
+}
+/* FORCE ALL PRIMARY ACTIONS TO LOGIN BUTTON COLOR */
+.rental-email-btn,
+.rental-btn-primary,
+.rental-cta-btn {
+  background-color: var(--rc-primary) !important;
+  color: var(--rc-primary-foreground) !important;
+}

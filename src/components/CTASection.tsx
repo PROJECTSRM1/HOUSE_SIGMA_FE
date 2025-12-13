@@ -1,28 +1,44 @@
-import { motion } from 'framer-motion';
-import '@/styles/CTA.css';
+import { ArrowRight, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import "@/styles/CTA.css";
+
 
 const CTASection = () => {
   return (
-    <section className="cta">
+    <section className="cta-section">
       <div className="cta-container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="cta-box"
-        >
+        <div className="cta-inner">
+
           <h2 className="cta-title">
-            Ready to Take Your Property Management to the Next Level?
+            Ready to simplify your property maintenance?
           </h2>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="cta-button"
-          >
-            Get Started Now
-          </motion.button>
-        </motion.div>
+
+          <p className="cta-subtext">
+            Join thousands of property managers who’ve streamlined their 
+            maintenance operations with House Sigma.
+          </p>
+
+          <div className="cta-input-group">
+            <div className="cta-input-wrapper">
+              <Mail className="cta-mail-icon" />
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="cta-input"
+              />
+            </div>
+
+            <Button variant="accent" size="lg" className="cta-button">
+              Get Started
+              <ArrowRight className="cta-arrow" />
+            </Button>
+          </div>
+
+          <p className="cta-footnote">
+            Free 14-day trial • No credit card required • Cancel anytime
+          </p>
+        </div>
       </div>
     </section>
   );

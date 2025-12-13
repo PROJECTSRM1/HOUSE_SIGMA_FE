@@ -39,14 +39,12 @@ import { Button } from '@/components/ui/button';
 import '@/styles/Navbar.css';
 import { useAuthModal } from '@/context/AuthModalContext';
 
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
   const { openAuthModal } = useAuthModal();
-
 
   const toggleMobileDropdown = (menu: string) => {
     setOpenMobileDropdown(openMobileDropdown === menu ? null : menu);
@@ -118,7 +116,6 @@ const Navbar = () => {
         </Link>
 
         <nav className="navbar-menu">
-          {/* Homes Dropdown */}
           <div className="navbar-item">
             <button className="navbar-link">
               Homes <ChevronDown />
@@ -131,7 +128,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          {/* Features Dropdown */}
+
           <div className="navbar-item">
             <button className="navbar-link">
               Features <ChevronDown />
@@ -174,7 +171,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Portfolio Types Dropdown */}
           <div className="navbar-item">
             <button className="navbar-link">
               Portfolio Types <ChevronDown />
@@ -188,7 +184,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Why HouseSigma Dropdown */}
           <div className="navbar-item">
             <button className="navbar-link">
               Why HouseSigma <ChevronDown />
@@ -202,7 +197,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Static Links */}
           <Link to="/blog" className="navbar-link">Blog</Link>
           <Link to="/market-trends" className="navbar-link">Market Trends</Link>
         </nav>
@@ -230,7 +224,6 @@ const Navbar = () => {
             className="mobile-menu"
           >
             <div className="mobile-menu-content">
-              {/* Homes Accordion */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -256,7 +249,7 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
-              {/* Features Accordion */}
+
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -310,7 +303,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Portfolio Types Accordion */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -337,7 +329,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Why HouseSigma Accordion */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -364,7 +355,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Static Links */}
               <Link to="/blog" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
               <Link to="/market-trends" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Market Trends</Link>
               

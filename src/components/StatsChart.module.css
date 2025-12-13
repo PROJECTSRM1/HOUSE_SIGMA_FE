@@ -49,7 +49,7 @@
 }
 
 .statsButton {
-  background: #199fb1;
+  background: #1e4a7a;
   color: white;
   border: none;
   padding: 8px 20px;
@@ -60,5 +60,5 @@
 }
 
 .statsButton:hover {
-  background: #138aa1;
+  background: #1e4a7a;
 }
