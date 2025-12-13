@@ -87,7 +87,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background: #1e4a7a;
+  background: #1e4a7a !important;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
