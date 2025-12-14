@@ -61,13 +61,6 @@ const HeroSlider = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="hero-btn-primary"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="hero-btn-secondary"
               >
                 <Play size={18} />

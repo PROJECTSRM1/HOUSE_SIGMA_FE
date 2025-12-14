@@ -54,7 +54,7 @@
 .portfolio-item-header svg {
   width: 1.25rem;
   height: 1.25rem;
-  color: hsl(var(--teal));
+  color: #1e4a7a;
 }
 
 .portfolio-item-list {
@@ -94,7 +94,7 @@
 .portfolio-bottom-item svg {
   width: 1.25rem;
   height: 1.25rem;
-  color: hsl(var(--teal));
+  color: #1e4a7a;
 }
 
 /* Why Choose Section */
@@ -127,7 +127,7 @@
 }
 
 .why-choose-item:hover {
-  border-color: hsl(var(--teal) / 0.3);
+  border-color: rgba(30, 74, 122, 0.3);
   box-shadow: var(--shadow-md);
 }
 
@@ -144,7 +144,7 @@
 .why-choose-item-header svg {
   width: 1.25rem;
   height: 1.25rem;
-  color: hsl(var(--teal));
+  color: #1e4a7a;
 }
 
 .why-choose-item p {
@@ -163,7 +163,7 @@
   font-size: 0.9375rem;
   font-weight: 600;
   color: hsl(var(--primary-foreground));
-  background: hsl(var(--teal));
+  background: #1e4a7a;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -172,7 +172,7 @@
 }
 
 .why-choose-contact:hover {
-  background: hsl(var(--teal-dark));
+  background: #163a61;
 }
 
 .why-choose-contact svg {

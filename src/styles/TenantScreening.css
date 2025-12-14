@@ -1,0 +1,629 @@
+/* Tenant Screening Page Styles */
+.tenant-screening-page {
+  padding-top: 70px;
+}
+
+/* Hero Section */
+.ts-hero {
+  padding: 4rem 1.5rem 5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.ts-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ts-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.ts-breadcrumb a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.ts-breadcrumb span {
+  color: #9ca3af;
+}
+
+.ts-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1e4a7a;
+
+  margin-bottom: 1.5rem;
+}
+
+.ts-hero-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ts-hero-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ts-hero-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ts-hero-input:focus {
+  border-color: #3b82f6;
+}
+
+.ts-hero-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background:  #1e4a7a;
+
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.ts-hero-btn:hover {
+  background: #163a63;
+}
+
+.ts-hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.ts-hero-stars {
+  display: flex;
+  gap: 2px;
+  color: #f59e0b;
+}
+
+.ts-hero-image {
+  position: relative;
+}
+
+.ts-hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Why Section */
+.ts-why {
+  padding: 5rem 1.5rem;
+  background: white;
+}
+
+.ts-why-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ts-section-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #eff6ff;
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.ts-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 3rem;
+}
+
+.ts-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ts-why-card {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ts-why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ts-why-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3b82f6;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+}
+
+.ts-why-icon svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.ts-why-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.ts-why-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.ts-features {
+  padding: 5rem 1.5rem;
+  background: #f8fafc;
+}
+
+.ts-features-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ts-features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ts-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.ts-feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ts-feature-block.reverse {
+  direction: rtl;
+}
+
+.ts-feature-block.reverse > * {
+  direction: ltr;
+}
+
+.ts-feature-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.ts-feature-content p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.ts-feature-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Stats Section */
+.ts-stats {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%);
+  color: white;
+}
+
+.ts-stats-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ts-stats-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.ts-stats-content p {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.ts-stats-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ts-stats-btn:hover {
+  background: #2563eb;
+}
+
+.ts-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.ts-stat-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.ts-stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.ts-stat-label {
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+/* FAQ Section */
+.list-faq {
+  padding: 5rem 0;
+}
+
+.list-faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1f2a44;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.list-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.list-faq-item {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #d9e2ef;
+}
+
+.list-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-faq-question h4 {
+  font-size: 1rem;
+  color: #1f2a44;
+  margin: 0;
+  font-weight: 600;
+}
+
+.faq-arrow {
+  transition: transform 0.2s ease;
+  color: #8b97a8;
+  font-size: 1.25rem;
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.list-faq-answer {
+  font-size: 0.95rem;
+  color: #5c6677;
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Explore Section */
+.ts-explore {
+  padding: 70px 0;
+  background: #fafbff;
+  text-align: center;
+}
+
+.ts-explore-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2a5a;
+}
+
+.ts-explore-subtitle {
+  margin-top: 12px;
+  color: #6b7280;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.ts-explore-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.ts-explore-card span {
+  font-size: 16px;     /* smaller & cleaner */
+  font-weight: 500;
+}
+
+.ts-explore-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #1f2a5a;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ts-explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.ts-explore-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid #c7d7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+ 
+
+.ts-explore-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+}
+
+.ts-explore-icon-box.gradient {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  color: #fff;
+  border: none;
+}
+
+.ts-explore-highlight {
+  background: #eef0ff;
+  border: 1px solid #d9ddff;
+}
+
+.ts-section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1f2a5a;
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.ts-section-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+
+/* Bottom CTA Section */
+.ts-bottom-cta {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  text-align: center;
+}
+
+.ts-bottom-cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ts-bottom-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.ts-bottom-cta p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.ts-bottom-cta-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.ts-bottom-cta-input {
+  flex: 1;
+  max-width: 350px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.ts-bottom-cta-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ts-bottom-cta-btn:hover {
+  background: #2d2d4a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ts-hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ts-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .ts-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ts-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-feature-block {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ts-hero-title {
+    font-size: 2rem;
+  }
+
+  .ts-hero-form {
+    flex-direction: column;
+  }
+
+  .ts-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-bottom-cta-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ts-bottom-cta-input {
+    max-width: none;
+    width: 100%;
+  }
+}
+/* FEATURES CTA */
+.ts-features-cta {
+  padding: 50px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.ts-features-cta-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ts-features-action-btn {
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.ts-features-action-btn:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}

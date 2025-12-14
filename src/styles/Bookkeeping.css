@@ -1,0 +1,716 @@
+/* Bookkeeping Page Styles */
+
+.bookkeeping-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.bookkeeping-hero {
+  background: linear-gradient(135deg, hsl(210 40% 96%) 0%, hsl(220 30% 94%) 100%);
+  padding: 6rem 0 4rem;
+  margin-top: 70px;
+}
+
+.bookkeeping-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.bookkeeping-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: hsl(var(--navy));
+}
+
+.bookkeeping-breadcrumb a {
+  color: hsl(var(--navy));
+  text-decoration: none;
+}
+
+.bookkeeping-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.bookkeeping-breadcrumb span {
+  color: hsl(215 16% 50%);
+}
+
+.bookkeeping-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.bookkeeping-hero-text h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.bookkeeping-hero-text p {
+  font-size: 1.125rem;
+  color: hsl(215 16% 40%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.bookkeeping-email-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bookkeeping-email-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid hsl(215 20% 85%);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.bookkeeping-email-input:focus {
+  outline: none;
+  border-color: #1e4a7a;
+}
+
+.bookkeeping-cta-btn {
+  padding: 1rem 2rem;
+  background: #1e4a7a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bookkeeping-cta-btn:hover {
+  background: #163a61;
+}
+
+.bookkeeping-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bookkeeping-rating-text {
+  font-size: 0.875rem;
+  color: hsl(215 16% 40%);
+}
+
+.bookkeeping-stars {
+  display: flex;
+  gap: 0.25rem;
+  color: hsl(45 100% 50%);
+}
+
+.bookkeeping-capterra {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+}
+
+.bookkeeping-hero-video {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bookkeeping-video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(220 50% 30%) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.bookkeeping-video-placeholder h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bookkeeping-video-placeholder p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.bookkeeping-play-btn {
+  width: 64px;
+  height: 64px;
+  background: #1e4a7a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.bookkeeping-play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Why HouseSigma Section */
+.bookkeeping-why {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bookkeeping-why h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bookkeeping-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.bookkeeping-why-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bookkeeping-why-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.bookkeeping-why-icon.blue {
+  background: hsl(210 100% 95%);
+  color: hsl(210 100% 50%);
+}
+
+.bookkeeping-why-icon.pink {
+  background: hsl(330 100% 95%);
+  color: hsl(330 80% 55%);
+}
+
+.bookkeeping-why-icon.teal {
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
+}
+
+.bookkeeping-why-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bookkeeping-why-card p {
+  font-size: 0.95rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.bookkeeping-features {
+  padding: 5rem 0;
+}
+
+.bookkeeping-features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bookkeeping-features-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 1rem;
+}
+
+.bookkeeping-features-header p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+}
+
+.bookkeeping-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.bookkeeping-feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid hsl(215 20% 92%);
+}
+
+.bookkeeping-feature-card.blue-border {
+  border-left: 4px solid hsl(210 100% 60%);
+}
+
+.bookkeeping-feature-card.pink-border {
+  border-left: 4px solid hsl(330 80% 65%);
+}
+
+.bookkeeping-feature-card.teal-border {
+  border-left: 4px solid #1e4a7a;
+}
+
+.bookkeeping-feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bookkeeping-feature-card p {
+  font-size: 0.95rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.bookkeeping-feature-image {
+  width: 100%;
+  height: 200px;
+  background: hsl(210 40% 96%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1e4a7a;
+  font-size: 0.875rem;
+  gap: 1rem;
+}
+
+.bookkeeping-feature-image span {
+  font-weight: 600;
+  color: hsl(var(--navy));
+}
+
+.bookkeeping-cta-center {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Effect Section */
+.bookkeeping-effect {
+  padding: 5rem 0;
+  background: white;
+}
+
+.bookkeeping-effect-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.bookkeeping-effect-text h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 1rem;
+}
+
+.bookkeeping-effect-text p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.bookkeeping-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.bookkeeping-stat-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.bookkeeping-stat-card.blue {
+  background: linear-gradient(135deg, hsl(210 100% 97%) 0%, hsl(210 80% 95%) 100%);
+}
+
+.bookkeeping-stat-card.orange {
+  background: linear-gradient(135deg, hsl(30 100% 97%) 0%, hsl(30 90% 92%) 100%);
+}
+
+.bookkeeping-stat-card.green {
+  background: linear-gradient(135deg, hsl(150 60% 95%) 0%, hsl(150 50% 90%) 100%);
+}
+
+.bookkeeping-stat-card.purple {
+  background: linear-gradient(135deg, hsl(260 60% 97%) 0%, hsl(260 50% 93%) 100%);
+}
+
+.bookkeeping-stat-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.bookkeeping-stat-icon.blue {
+  color: hsl(210 100% 50%);
+}
+
+.bookkeeping-stat-icon.orange {
+  color: hsl(30 100% 50%);
+}
+
+.bookkeeping-stat-icon.green {
+  color: hsl(150 70% 40%);
+}
+
+.bookkeeping-stat-icon.purple {
+  color: hsl(260 70% 55%);
+}
+
+.bookkeeping-stat-card span {
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.bookkeeping-stat-card strong {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+}
+
+.bookkeeping-stats-note {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 0.75rem;
+  color: hsl(215 16% 60%);
+  margin-top: 0.5rem;
+}
+
+/* Testimonial Section */
+.bookkeeping-testimonial {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bookkeeping-testimonial h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bookkeeping-testimonial-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bookkeeping-testimonial-image {
+  width: 180px;
+  height: 220px;
+  background: hsl(210 40% 92%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bookkeeping-testimonial-play {
+  width: 48px;
+  height: 48px;
+  background: #1e4a7a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.bookkeeping-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookkeeping-quote-icon {
+  color: #1e4a7a;
+  margin-bottom: 1rem;
+}
+
+.bookkeeping-testimonial-content blockquote {
+  font-size: 1.25rem;
+  color: hsl(var(--navy));
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.bookkeeping-testimonial-author {
+  font-weight: 600;
+  color: hsl(var(--navy));
+}
+
+.bookkeeping-testimonial-role {
+  font-size: 0.875rem;
+  color: hsl(215 16% 50%);
+}
+
+/* FAQ Section */
+.bookkeeping-faq {
+  padding: 5rem 0;
+}
+
+.bookkeeping-faq h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 3rem;
+}
+
+.bookkeeping-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.bookkeeping-faq-item {
+  background: white;
+  border: 1px solid hsl(215 20% 92%);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.bookkeeping-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bookkeeping-faq-question h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--navy));
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  color: hsl(215 16% 50%);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.bookkeeping-faq-answer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: hsl(215 16% 45%);
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* Explore Features Section */
+.bookkeeping-explore {
+  padding: 5rem 0;
+  background: hsl(210 40% 98%);
+}
+
+.bookkeeping-explore-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bookkeeping-explore-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--navy));
+  margin-bottom: 0.75rem;
+}
+
+.bookkeeping-explore-header p {
+  font-size: 1rem;
+  color: hsl(215 16% 45%);
+}
+
+.bookkeeping-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bookkeeping-explore-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid hsl(215 20% 92%);
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.bookkeeping-explore-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.bookkeeping-explore-card.highlighted {
+  background: hsl(var(--navy));
+}
+
+.bookkeeping-explore-card.highlighted span {
+  color: white;
+}
+
+.bookkeeping-explore-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bookkeeping-explore-icon.blue {
+  background: hsl(210 100% 95%);
+  color: hsl(210 100% 50%);
+}
+
+.bookkeeping-explore-icon.teal {
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
+}
+
+.bookkeeping-explore-icon.purple {
+  background: hsl(260 60% 95%);
+  color: hsl(260 70% 55%);
+}
+
+.bookkeeping-explore-icon.pink {
+  background: hsl(330 100% 95%);
+  color: hsl(330 80% 55%);
+}
+
+.bookkeeping-explore-icon.green {
+  background: hsl(150 60% 92%);
+  color: hsl(150 70% 35%);
+}
+
+.bookkeeping-explore-icon.orange {
+  background: hsl(30 100% 92%);
+  color: hsl(30 100% 45%);
+}
+
+.bookkeeping-explore-card span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(var(--navy));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bookkeeping-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bookkeeping-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookkeeping-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookkeeping-effect-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bookkeeping-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookkeeping-explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bookkeeping-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .bookkeeping-email-form {
+    flex-direction: column;
+  }
+
+  .bookkeeping-testimonial-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bookkeeping-testimonial-image {
+    margin: 0 auto;
+  }
+
+  .bookkeeping-explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookkeeping-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookkeeping-stats-note {
+    grid-column: span 1;
+  }
+}
