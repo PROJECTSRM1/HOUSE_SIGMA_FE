@@ -20,7 +20,26 @@ import TenantScreening from "./pages/features/leasing/TenantScreening";
 import Crm from "./pages/features/leasing/Crm";
 
 /* ================= CONTEXT ================= */
+import Maintenance from "./pages/features/operations/maintenance";
+import MobileApp from "./pages/features/operations/MobileApp";
+import OwnerPortal from "./pages/features/operations/OwnerPortal";
+import RentalCollection from "./pages/features/Resident/RentalCollection";
+import TenantManagement from "./pages/features/Resident/TenantManagement";
+import CommunicationTools from "./pages/features/Resident/CommunicationTools";
+import RentersInsurance from "./pages/features/Resident/RentersInsurance";
+
 import { AuthModalProvider } from "./context/AuthModalContext";
+import Ontario from "./pages/Ontario";
+import BritishColumbia from "./pages/BritishColumbia";
+import Alberta from "./pages/Alberta";
+import MarketTrends from "./pages/MarketTrends";
+import Bookkeeping from "./pages/Bookkeeping";
+import FinancialReports from "./pages/Financialreports";
+import Aboutus from "./pages/Aboutus";
+import PressMedia from "./pages/PressMedia";
+import FAQ from "./pages/FAQ";
+import ContactUs from "./pages/ContactUs";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -34,15 +53,6 @@ const App = () => (
         <BrowserRouter>
           <AuthModalProvider>
             <Routes>
-
-              {/* ================= HOME ================= */}
-              <Route path="/" element={<Index />} />
-
-              {/* ================= FEATURES ROOT ================= */}
-              <Route
-                path="/features"
-                element={<EmptyPage title="Features" />}
-              />
 
               {/* ================= ACCOUNTING ROUTES ================= */}
               <Route
@@ -76,39 +86,45 @@ const App = () => (
                 element={<Crm />}
               />
 
-              {/* ================= PORTFOLIO ================= */}
-              <Route
-                path="/portfolio/*"
-                element={<EmptyPage title="Portfolio Types" />}
-              />
+              {/* Root */}
+              <Route path="/" element={<Index />} />
 
-              {/* ================= COMPANY ================= */}
-              <Route path="/about" element={<EmptyPage title="About Us" />} />
-              <Route path="/press" element={<EmptyPage title="Press & Media" />} />
-              <Route path="/faq" element={<EmptyPage title="FAQ" />} />
-              <Route path="/contact" element={<EmptyPage title="Contact Us" />} />
+              {/* Features Routes */}
+              <Route path="/features" element={<EmptyPage title="Features" />} />
+              <Route path="/features/bank-sync" element={<BankSync />} />
+              <Route path="/features/maintenance" element={<Maintenance />} />
+              <Route path="/features/mobile-app" element={<MobileApp />} />
+              <Route path="/features/owner-portal" element={<OwnerPortal />} />
+              <Route path="/features/rent-collection" element={<RentalCollection />} />
+              <Route path="/features/tenant-management" element={<TenantManagement />} />
+              <Route path="/features/communication" element={<CommunicationTools />} />
+              <Route path="features/insurance" element ={<RentersInsurance />} />
+              {/* Portfolio Routes */}
+              <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+              
+               {/* Homes Routes */}
+            <Route path="/homes/ontario" element={<Ontario />} />
+            <Route path="/homes/british-columbia" element={<BritishColumbia />} />
+            <Route path="/homes/alberta" element={<Alberta />} />
+            
+            {/* Portfolio Routes */}
+            <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+            
+            {/* Company Routes */}
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/press" element={<PressMedia />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/market-trends" element={<MarketTrends />} />
 
-              {/* ================= CONTENT ================= */}
-              <Route path="/blog" element={<EmptyPage title="Blog" />} />
-              <Route
-                path="/market-trends"
-                element={<EmptyPage title="Market Trends" />}
-              />
-
-              {/* ================= LEGAL / SUPPORT ================= */}
+              {/* Support Routes */}
               <Route path="/feedback" element={<EmptyPage title="Feedback" />} />
-              <Route
-                path="/privacy"
-                element={<EmptyPage title="Privacy & Security" />}
-              />
-              <Route
-                path="/terms"
-                element={<EmptyPage title="Terms & Conditions" />}
-              />
+              <Route path="/privacy" element={<EmptyPage title="Privacy & Security" />} />
+              <Route path="/terms" element={<EmptyPage title="Terms & Conditions" />} />
 
-              {/* ================= FALLBACK ================= */}
+              {/* 404 Catch-all */}
               <Route path="*" element={<NotFound />} />
-
             </Routes>
           </AuthModalProvider>
         </BrowserRouter>
