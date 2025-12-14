@@ -57,32 +57,44 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* ================= FEATURES MENU (UPDATED ROUTES ONLY) ================= */
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+    
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [mobileMenuOpen]);
+
+  /* ================= FEATURES MENU ================= */
 
   const featuresMenu = {
-  accounting: [
-  {
-    name: "Bookkeeping",
-    icon: BookOpen,
-    path: "/features/accounting/bookkeeping" // if exists
-  },
-  {
-    name: "Bank Sync",
-    icon: RefreshCw,
-    path: "/features/accounting/bank-sync"
-  },
-  {
-    name: "Financial Reports",
-    icon: FileText,
-    path: "/features/accounting/financial-reports" // if exists
-  },
-  {
-    name: "QuickBooks Integration",
-    icon: Globe,
-    path: "/features/accounting/quickbooks-integration" // ✅ FIXED
-  }
-],
-
+    accounting: [
+      {
+        name: "Bookkeeping",
+        icon: BookOpen,
+        path: "/features/bookkeeping"
+      },
+      {
+        name: "Bank Sync",
+        icon: RefreshCw,
+        path: "/features/bank-sync"
+      },
+      {
+        name: "Financial Reports",
+        icon: FileText,
+        path: "/features/financial-reports"
+      },
+      {
+        name: "QuickBooks Integration",
+        icon: Globe,
+        path: "/features/quickbooks-integration"
+      }
+    ],
 
     leasing: [
       {
@@ -110,8 +122,7 @@ const Navbar = () => {
     operations: [
       { name: "Maintenance", icon: Wrench, path: "/features/maintenance" },
       { name: "Mobile App", icon: Smartphone, path: "/features/mobile-app" },
-      { name: "Owner Portal", icon: Building2, path: "/features/owner-portal" },
-      { name: "Security", icon: Shield, path: "/features/security" }
+      { name: "Owner Portal", icon: Building2, path: "/features/owner-portal" }
     ],
 
     resident: [
@@ -122,7 +133,7 @@ const Navbar = () => {
     ]
   };
 
-  /* ================= OTHER MENUS (UNCHANGED) ================= */
+  /* ================= OTHER MENUS ================= */
 
   const portfolioMenu = [
     { name: "Residential", icon: Home, path: "/portfolio/residential" },
@@ -143,6 +154,11 @@ const Navbar = () => {
     { name: "FAQ", icon: HelpCircle, path: "/faq" },
     { name: "Contact Us", icon: Phone, path: "/contact" }
   ];
+
+  const handleMobileLinkClick = () => {
+    setMobileMenuOpen(false);
+    setOpenMobileDropdown(null);
+  };
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -173,6 +189,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Features */}
           <div className="navbar-item">
             <button className="navbar-link">
               Features <ChevronDown />
@@ -221,6 +238,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Portfolio Types */}
           <div className="navbar-item">
             <button className="navbar-link">
               Portfolio Types <ChevronDown />
@@ -234,6 +252,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Why HouseSigma */}
           <div className="navbar-item">
             <button className="navbar-link">
               Why HouseSigma <ChevronDown />
@@ -267,17 +286,20 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* ================= MOBILE MENU (UNCHANGED STRUCTURE) ================= */}
+      {/* ================= MOBILE MENU ================= */}
 
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "calc(100vh - 64px)" }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="mobile-menu"
           >
             <div className="mobile-menu-content">
+              
+              {/* Homes Dropdown */}
               <div className="mobile-dropdown">
                 <button
                   className="mobile-dropdown-trigger"
@@ -287,17 +309,31 @@ const Navbar = () => {
                   <ChevronRight className={`mobile-dropdown-icon ${openMobileDropdown === "homes" ? "open" : ""}`} />
                 </button>
 
-                {openMobileDropdown === "homes" && (
-                  <div className="mobile-dropdown-content">
-                    {homesMenu.map(item => (
-                      <Link key={item.path} to={item.path} className="mobile-submenu-link">
-                        <item.icon size={16} /> {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                <AnimatePresence>
+                  {openMobileDropdown === "homes" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="mobile-dropdown-content"
+                    >
+                      {homesMenu.map(item => (
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link"
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
+              {/* Features Dropdown */}
               <div className="mobile-dropdown">
                 <button
                   className="mobile-dropdown-trigger"
@@ -306,7 +342,81 @@ const Navbar = () => {
                   Features
                   <ChevronRight className={`mobile-dropdown-icon ${openMobileDropdown === "features" ? "open" : ""}`} />
                 </button>
+                
+                <AnimatePresence>
+                  {openMobileDropdown === "features" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="mobile-dropdown-content"
+                    >
+                      {/* Accounting Section */}
+                      <h4 className="mobile-submenu-category">
+                        <Calculator size={14} /> ACCOUNTING
+                      </h4>
+                      {featuresMenu.accounting.map((item) => (
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
+                        </Link>
+                      ))}
 
+                      {/* Leasing Section */}
+                      <h4 className="mobile-submenu-category">
+                        <Key size={14} /> LEASING
+                      </h4>
+                      {featuresMenu.leasing.map((item) => (
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
+                        </Link>
+                      ))}
+
+                      {/* Operations Section */}
+                      <h4 className="mobile-submenu-category">
+                        <Settings size={14} /> OPERATIONS
+                      </h4>
+                      {featuresMenu.operations.map((item) => (
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
+                        </Link>
+                      ))}
+
+                      {/* Resident Experience Section */}
+                      <h4 className="mobile-submenu-category">
+                        <Users size={14} /> RESIDENT EXPERIENCE
+                      </h4>
+                      {featuresMenu.resident.map((item) => (
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Portfolio Types Dropdown */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -315,17 +425,24 @@ const Navbar = () => {
                   Portfolio Types
                   <ChevronRight className={`mobile-dropdown-icon ${openMobileDropdown === 'portfolio' ? 'open' : ''}`} />
                 </button>
+                
                 <AnimatePresence>
                   {openMobileDropdown === 'portfolio' && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
                       className="mobile-dropdown-content"
                     >
                       {portfolioMenu.map((item) => (
-                        <Link key={item.path} to={item.path} className="mobile-submenu-link" onClick={() => setMobileMenuOpen(false)}>
-                          <item.icon size={16} /> {item.name}
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
                         </Link>
                       ))}
                     </motion.div>
@@ -333,6 +450,7 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
+              {/* Why HouseSigma Dropdown */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
@@ -341,17 +459,24 @@ const Navbar = () => {
                   Why HouseSigma
                   <ChevronRight className={`mobile-dropdown-icon ${openMobileDropdown === 'why' ? 'open' : ''}`} />
                 </button>
+                
                 <AnimatePresence>
                   {openMobileDropdown === 'why' && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
                       className="mobile-dropdown-content"
                     >
                       {whyMenu.map((item) => (
-                        <Link key={item.path} to={item.path} className="mobile-submenu-link" onClick={() => setMobileMenuOpen(false)}>
-                          <item.icon size={16} /> {item.name}
+                        <Link 
+                          key={item.path} 
+                          to={item.path} 
+                          className="mobile-submenu-link" 
+                          onClick={handleMobileLinkClick}
+                        >
+                          <item.icon size={18} /> {item.name}
                         </Link>
                       ))}
                     </motion.div>
@@ -359,10 +484,31 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              <Link to="/blog" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-              <Link to="/market-trends" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Market Trends</Link>
+              {/* Direct Links */}
+              <Link 
+                to="/blog" 
+                className="mobile-link" 
+                onClick={handleMobileLinkClick}
+              >
+                Blog
+              </Link>
               
-              <Button onClick={openAuthModal} className="login-btn-blue mobile-login-btn">
+              <Link 
+                to="/market-trends" 
+                className="mobile-link" 
+                onClick={handleMobileLinkClick}
+              >
+                Market Trends
+              </Link>
+              
+              {/* Login Button */}
+              <Button 
+                onClick={() => {
+                  openAuthModal();
+                  handleMobileLinkClick();
+                }} 
+                className="login-btn-blue mobile-login-btn"
+              >
                 Login
               </Button>
             </div>

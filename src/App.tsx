@@ -59,13 +59,10 @@ const App = () => (
             <Routes>
 
               {/* ================= ACCOUNTING ROUTES ================= */}
-              <Route
-                path="/features/accounting/bank-sync"
-                element={<BankSync />}
-              />
+
 
               <Route
-                path="/features/accounting/quickbooks-integration"
+                path="/features/quickbooks-integration"
                 element={<QuickBooksIntegration />}
               />
 
@@ -103,6 +100,8 @@ const App = () => (
               <Route path="/features/tenant-management" element={<TenantManagement />} />
               <Route path="/features/communication" element={<CommunicationTools />} />
               <Route path="features/insurance" element ={<RentersInsurance />} />
+              <Route path="features/bookkeeping" element ={<Bookkeeping />} />
+              <Route path="features/financial-reports" element ={<FinancialReports />} />
               {/* Portfolio Routes */}
               <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
               

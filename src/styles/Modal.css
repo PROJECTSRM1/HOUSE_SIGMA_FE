@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99999 !important;
+  z-index: 99999;
   padding: 1rem;
 }
 
@@ -18,7 +18,8 @@
   max-width: 420px;
   max-height: 90vh;
   overflow-y: auto;
-  z-index: 100000 !important;
+  position: relative;
+  z-index: 1;
 }
 
 .modal-header {
@@ -27,6 +28,7 @@
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid hsl(var(--border));
+  position: relative;
 }
 
 .modal-title {
@@ -47,6 +49,7 @@
   cursor: pointer;
   color: hsl(var(--muted-foreground));
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .modal-close:hover {
@@ -372,6 +375,14 @@
   .modal {
     max-width: 100%;
     margin: 0.5rem;
+  }
+
+  .modal-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .modal-content {
+    padding: 1.25rem;
   }
 
   .otp-input {

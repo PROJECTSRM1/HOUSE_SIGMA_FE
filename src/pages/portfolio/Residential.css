@@ -39,7 +39,7 @@
 }
 
 .hero-title span {
-  color: #00aa6b;
+  color: #1e4a7a !important;
 }
 
 /* SUBTITLE */
@@ -69,7 +69,7 @@
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
-  background: #00aa6b;
+  background: #1e4a7a !important;
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
@@ -237,8 +237,8 @@
 }
 
 .modal-badge {
-  background: #00aa6b22;
-  color: #00aa6b;
+  background: #1e4a7a22;
+  color: #1e4a7a !important;
   padding: 6px 12px;
   border-radius: 50px;
   font-size: 13px;
@@ -338,7 +338,7 @@
 }
 
 .portfolio-pill.active {
-  background: #10b981;
+  background: #1e4a7a !important;
   color: white;
 }
 
@@ -354,7 +354,7 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.2px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   margin-bottom: 6px;
   text-transform: uppercase;
 }
@@ -825,7 +825,7 @@
 
 .cta-right input:focus {
   outline: none;
-  border-color: #00aa6b;
+  border-color: #1e4a7a !important;
   background: #ffffff;
 }
 
@@ -833,7 +833,7 @@
   padding: 14px 28px;
   border-radius: 14px;
   border: none;
-  background: #00aa6b;
+  background: #1e4a7a !important;
   color: #ffffff;
   font-weight: 600;
   font-size: 15px;
@@ -843,7 +843,7 @@
 
 .cta-right button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 170, 107, 0.35);
+  box-shadow: 0 10px 25px rgba(30, 74, 122, 0.35);
 }
 
 /* ========================= CTA RESPONSIVE ========================= */
@@ -975,7 +975,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -1005,7 +1005,7 @@
 }
 
 .faq-card:hover {
-  border-color: #00aa6b55;
+  border-color: #1e4a7a55;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
 }
 
@@ -1033,7 +1033,7 @@
 .faq-question svg {
   width: 18px;
   height: 18px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   transition: transform 0.25s ease;
 }
 
@@ -1121,7 +1121,7 @@
 .hero-badge strong {
   font-size: 20px;
   font-weight: 800;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   line-height: 1;
 }
 
@@ -1143,4 +1143,3 @@
   bottom: 16px;
   right: 16px;
 }
-

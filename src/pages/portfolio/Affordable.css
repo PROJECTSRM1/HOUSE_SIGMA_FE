@@ -39,7 +39,7 @@
 }
 
 .hero-title span {
-  color: #00aa6b;
+  color: #1e4a7a !important;
 }
 
 /* SUBTITLE */
@@ -69,7 +69,7 @@
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
-  background: #00aa6b;
+  background: #1e4a7a !important;
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
@@ -238,7 +238,7 @@
 
 .modal-badge {
   background: #00aa6b22;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   padding: 6px 12px;
   border-radius: 50px;
   font-size: 13px;
@@ -338,7 +338,7 @@
 }
 
 .portfolio-pill.active {
-  background: #10b981;
+  background: #1e4a7a !important;
   color: white;
 }
 
@@ -354,7 +354,7 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.2px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   margin-bottom: 6px;
   text-transform: uppercase;
 }
@@ -824,7 +824,7 @@
 
 .cta-right input:focus {
   outline: none;
-  border-color: #00aa6b;
+  border-color: #1e4a7a !important;
   background: #ffffff;
 }
 
@@ -832,7 +832,7 @@
   padding: 14px 28px;
   border-radius: 14px;
   border: none;
-  background: #00aa6b;
+  background: #1e4a7a !important;
   color: #ffffff;
   font-weight: 600;
   font-size: 15px;
@@ -971,7 +971,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -1029,7 +1029,7 @@
 .faq-question svg {
   width: 18px;
   height: 18px;
-  color: #00aa6b;
+  color: #1e4a7a !important;
   transition: transform 0.25s ease;
 }
 
