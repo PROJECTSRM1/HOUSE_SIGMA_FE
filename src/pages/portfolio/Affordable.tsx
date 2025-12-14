@@ -209,7 +209,7 @@ const AffordableHousingPage: React.FC = () => {
               <ul className="modal-points">
                 <li>✔ Built for regulated housing programs</li>
                 <li>✔ Compliance-first workflows</li>
-                <li>✔ Transparent resident management</li>
+                <li>✔ Transparent resident managements</li>
               </ul>
             </div>
 

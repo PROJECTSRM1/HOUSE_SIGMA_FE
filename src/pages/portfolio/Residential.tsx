@@ -161,7 +161,7 @@ const ResidentialPage: React.FC = () => {
 
         {/* Rating badge */}
         <div className="hero-badge top">
-          <strong>4.9★</strong>
+          <strong>4.8★</strong>
           <span>Rating</span>
         </div>
 

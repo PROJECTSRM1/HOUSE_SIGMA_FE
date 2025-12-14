@@ -59,7 +59,7 @@ const CommercialPage: React.FC = () => {
       title: "Operational Workflow Automation",
       cardText: "Automate approvals and reporting.",
       popupText:
-        "Track payment behavior, engagement analytics, communication history, and tenant risk indicators. Identify trends in reliability and responsiveness with data-driven insights. Monitor potential risks early using behavioral patterns and historical activity. Maintain a complete tenant profile to support informed decision-making. Improve retention and reduce defaults through proactive, intelligence-led management.",
+        "Track payment behavior, engagements analytics, communication history, and tenant risk indicators. Identify trends in reliability and responsiveness with data-driven insights. Monitor potential risks early using behavioral patterns and historical activity. Maintain a complete tenant profile to support informed decision-making. Improve retention and reduce defaults through proactive, intelligence-led management.",
         cardImg:img4,      
         popupImg: operation,
     },

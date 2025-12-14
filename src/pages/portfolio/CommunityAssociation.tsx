@@ -326,7 +326,7 @@ const CommunityAssociationPage: React.FC = () => {
 
         <div className="portfolio-grid">
           {[
-            "Residential",
+            "Residentials",
             "Multifamily",
             "Commercial",
             "Community Association",
