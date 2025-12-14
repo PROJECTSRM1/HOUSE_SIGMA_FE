@@ -11,16 +11,16 @@ import Footer from "@/components/Footer";
 import "./Affordable.css";
 
 /* HERO + FEATURE + GALLERY IMAGES */
-import img1 from '../../assets/hero-affordable.jpg';
-import img2 from  "../../assets/digital.png";
-import img3 from '../../assets/tracking.png';
-import img4 from '../../assets/waitlist.png';
-import img5 from '../../assets/hub.png';
-import img6 from '../../assets/subsidy.avif';
-import img7 from '../../assets/mantainence.jpg';
-import img10 from '../../assets/feature-analytics.jpg';
-import img11 from '../../assets/feature-communication.jpg';
-import img12 from '../../assets/img13.jpg';
+import img1 from '/assets/hero-affordable.jpg';
+import img2 from  "/assets/digital.png";
+import img3 from '/assets/tracking.png';
+import img4 from '/assets/waitlist.png';
+import img5 from '/assets/hub.png';
+import img6 from '/assets/subsidy.avif';
+import img7 from '/assets/mantainence.jpg';
+import img10 from '/assets/feature-analytics.jpg';
+import img11 from '/assets/feature-communication.jpg';
+import img12 from '/assets/img13.jpg';
 
 const AffordableHousingPage: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<any>(null);

@@ -11,20 +11,20 @@ import Footer from "@/components/Footer";
 import './Commerical.css';
 
 /* HERO + GALLERY IMAGES */
-import img1 from '../../assets/hero-commercial.jpg';
-import img2 from  '../../assets/por.png';
-import img4 from '../../assets/img4.svg';
-import img5 from '../../assets/leaseland.png';
-import operation from '../../assets/Operational.png';
-import img6 from '../../assets/img1.png';
-import tentintel from '../../assets/tenentintelligence.png';
-import data from '../../assets/Demand.png';
-import centeral from '../../assets/Centralized.png';
-import img10 from '../../assets/feature-analytics.jpg';
-import img11 from '../../assets/market.jpg';
-import img7 from '../../assets/financial.webp';
-import img8 from '../../assets/advanced.webp';
-import img9 from '../../assets/account.jpg';
+import img1 from '/assets/hero-commercial.jpg';
+import img2 from  '/assets/por.png';
+import img4 from '/assets/img4.svg';
+import img5 from '/assets/leaseland.png';
+import operation from '/assets/Operational.png';
+import img6 from '/assets/img1.png';
+import tentintel from '/assets/tenentintelligence.png';
+import data from '/assets/Demand.png';
+import centeral from '/assets/Centralized.png';
+import img10 from '/assets/feature-analytics.jpg';
+import img11 from '/assets/market.jpg';
+import img7 from '/assets/financial.webp';
+import img8 from '/assets/advanced.webp';
+import img9 from '/assets/account.jpg';
 
 
 // /* FEATURE CARD IMAGES */
