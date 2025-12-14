@@ -29,6 +29,10 @@ import CommunicationTools from "./pages/features/Resident/CommunicationTools";
 import RentersInsurance from "./pages/features/Resident/RentersInsurance";
 
 import { AuthModalProvider } from "./context/AuthModalContext";
+import ResidentialPage from "./pages/portfolio/Residential";
+import CommercialPage from "./pages/portfolio/Commerical";
+import CommunityAssociationPage from "./pages/portfolio/CommunityAssociation";
+import AffordableHousingPage from "./pages/portfolio/Affordable";
 import Ontario from "./pages/Ontario";
 import BritishColumbia from "./pages/BritishColumbia";
 import Alberta from "./pages/Alberta";
@@ -108,7 +112,10 @@ const App = () => (
             <Route path="/homes/alberta" element={<Alberta />} />
             
             {/* Portfolio Routes */}
-            <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+            <Route path="/portfolio/residential" element={<ResidentialPage/>} />
+            <Route path= "/portfolio/commercial" element={<CommercialPage/>} />
+            <Route path ="/portfolio/community" element={<CommunityAssociationPage/>}/>
+            <Route path = "/portfolio/affordable" element={<AffordableHousingPage/>}/>
             
             {/* Company Routes */}
             <Route path="/about" element={<Aboutus />} />
