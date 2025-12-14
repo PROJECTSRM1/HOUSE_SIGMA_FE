@@ -67,7 +67,7 @@ const stats: StatItem[] = [
 ];
 
 // one static image path
-const leaderProfileImg = "/assets/profile.webp";
+const leaderProfileImg = "/assets/Profile.webp";
 // or "/assets/leaders/profile.webp" if inside that folder
 
 const leaders: Person[] = [
@@ -91,17 +91,17 @@ const leaders: Person[] = [
 const founders: Person[] = [
   {
     name: "Founder_01",
-    title: "Chief Executive Officer",
+    title: "Co-Founder & CEO",
     img: leaderProfileImg,
   },
   {
     name: "Founder_02",
-    title: "Chief Technology Officer",
+    title: "Co-Founder & CTO",
     img: leaderProfileImg,
   },
   {
     name: "Founder_03",
-    title: "Chief Customer Officer",
+    title: "Co-Founder",
     img: leaderProfileImg,
   },
 ];
@@ -142,13 +142,33 @@ const AboutHero: React.FC = () => {
         </p>
 
         <div className="flex gap-4 mt-6">
-          <Button onClick={() => scrollTo("#mission")} className="px-6">
-            Our mission
-          </Button>
-          <Button variant="outline" onClick={() => scrollTo("#team")} className="px-6">
-            Meet the team
-          </Button>
-        </div>
+  {/* Our Mission — default blue */}
+  <Button
+    onClick={() => scrollTo("#mission")}
+    className="
+      px-6
+      bg-[#1e4a7a] text-white
+      hover:bg-[#163a61]
+      transition-colors
+    "
+  >
+    Our mission
+  </Button>
+
+  {/* Meet the Team — hover only */}
+  <Button
+    onClick={() => scrollTo("#team")}
+    className="
+      px-6
+      bg-transparent border border-white text-white
+      hover:bg-[#1e4a7a] hover:border-[#1e4a7a]
+      transition-colors
+    "
+  >
+    Meet the team
+  </Button>
+</div>
+
       </div>
     </header>
   );
