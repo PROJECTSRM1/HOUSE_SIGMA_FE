@@ -9,6 +9,10 @@ import NotFound from "./pages/NotFound";
 import EmptyPage from "./pages/EmptyPage";
 import BankSync from "./pages/features/accounting/BankSync";
 import { AuthModalProvider } from "./context/AuthModalContext";
+import ResidentialPage from "./pages/portfolio/Residential";
+import CommercialPage from "./pages/portfolio/Commerical";
+import CommunityAssociationPage from "./pages/portfolio/CommunityAssociation";
+import AffordableHousingPage from "./pages/portfolio/Affordable";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +33,10 @@ const App = () => (
             <Route path="/features/bank-sync" element={<BankSync />} />
             
             {/* Portfolio Routes */}
-            <Route path="/portfolio/*" element={<EmptyPage title="Portfolio" />} />
+            <Route path="/portfolio/residential" element={<ResidentialPage/>} />
+            <Route path= "/portfolio/commercial" element={<CommercialPage/>} />
+            <Route path ="/portfolio/community" element={<CommunityAssociationPage/>}/>
+            <Route path = "/portfolio/affordable" element={<AffordableHousingPage/>}/>
             
             {/* Company Routes */}
             <Route path="/about" element={<EmptyPage title="About Us" />} />
