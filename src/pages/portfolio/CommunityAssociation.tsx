@@ -11,17 +11,17 @@ import Footer from "@/components/Footer";
 import "./CommunityAssociation.css";
 
 /* HERO + FEATURE + GALLERY IMAGES */
-import img1 from '../../assets/hero-community.jpg';
-import img2 from '../../assets/vender.webp'
-import img3 from '../../assets/communication.webp';
-import img4 from '../../assets/Img_3.svg';
-import img5 from '../../assets/board.webp';
-import img8 from '../../assets/feature-ai.jpg';
-import img9 from '../../assets/digital.png';
-import img10 from '../../assets/feature-analytics.jpg';
-import img11 from '../../assets/Events.webp';
-import img12 from '../../assets/dashboard.webp';
-import img13 from '../../assets/loan.webp';
+import img1 from '/assets/hero-community.jpg';
+import img2 from '/assets/vender.webp'
+import img3 from '/assets/communication.webp';
+import img4 from '/assets/Img_3.svg';
+import img5 from '/assets/board.webp';
+import img8 from '/assets/feature-ai.jpg';
+import img9 from '/assets/digital.png';
+import img10 from '/assets/feature-analytics.jpg';
+import img11 from '/assets/Events.webp';
+import img12 from '/assets/dashboard.webp';
+import img13 from '/assets/loan.webp';
 
 const CommunityAssociationPage: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<any>(null);
