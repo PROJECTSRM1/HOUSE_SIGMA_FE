@@ -163,7 +163,7 @@ const Maintenance = () => {
 
       {/* WHY SECTION */}
       <section className="maintenance-why">
-        <h2 className="maintenance-section-title">Why Choose HouseSigma Maintenance?</h2>
+        <h2 className="maintenance-section-title">Why Choose HomeNest Maintenance?</h2>
 
         <div className="maintenance-why-grid">
           <div className="maintenance-why-card">
@@ -440,7 +440,7 @@ const Maintenance = () => {
             </div>
           </div>
         </div>
-        <p className="maintenance-stats-note">Based on HouseSigma internal data from 2024</p>
+        <p className="maintenance-stats-note">Based on HomeNesternal data from 2024</p>
       </section>
 
       {/* HOW IT WORKS */}
@@ -542,7 +542,7 @@ const Maintenance = () => {
         <div className="maintenance-cta-content">
           <h2 className="maintenance-cta-title">Ready to streamline maintenance?</h2>
           <p className="maintenance-cta-text">
-            Join 38,000+ properties managing maintenance more efficiently with HouseSigma.
+            Join 38,000+ properties managing maintenance more efficiently with HomeNest
           </p>
 
           <div className="maintenance-email-form cta">

@@ -64,7 +64,7 @@ const OwnerPortal = () => {
               </h1>
 
               <p className="owner-hero-text">
-                Provide real-time portfolio insights, automated reporting, and instant access to property data. HouseSigma's Owner Portal delivers professional-grade analytics at scale.
+                Provide real-time portfolio insights, automated reporting, and instant access to property data. HomeNest's Owner Portal delivers professional-grade analytics at scale.
               </p>
 
               <div className="owner-email-form">
@@ -142,7 +142,7 @@ const OwnerPortal = () => {
 
       {/* WHY SECTION */}
       <section className="owner-why">
-        <h2 className="owner-section-title">Why HouseSigma Owner Portal?</h2>
+        <h2 className="owner-section-title">Why HomeNestwner Portal?</h2>
 
         <div className="owner-why-grid">
           <div className="owner-why-card">
@@ -372,7 +372,7 @@ const OwnerPortal = () => {
             </div>
           </div>
         </div>
-        <p className="owner-stats-note">Based on HouseSigma customer surveys conducted in 2024</p>
+        <p className="owner-stats-note">Based on HomeNest customer surveys conducted in 2024</p>
       </section>
 
       {/* FAQ */}
@@ -382,12 +382,12 @@ const OwnerPortal = () => {
         <div className="owner-faq-grid">
           {[
             {
-              q:"What is the HouseSigma Owner Portal?",
+              q:"What is the HomeNest Owner Portal?",
               a:"The Owner Portal is a professional-grade platform that provides property owners with real-time access to their portfolio data, financial reports, and communication tools."
             },
             {
               q:"How secure is the Owner Portal?",
-              a:"HouseSigma employs bank-level security including 256-bit encryption, two-factor authentication, and SOC 2 compliance to protect all data."
+              a:"HomeNest employs bank-level security including 256-bit encryption, two-factor authentication, and SOC 2 compliance to protect all data."
             },
             {
               q:"Can owners access the portal on mobile?",
@@ -426,7 +426,7 @@ const OwnerPortal = () => {
             Ready to transform your owner experience?
           </h2>
           <p className="owner-cta-text">
-            Join leading property managers who trust HouseSigma.
+            Join leading property managers who trust HomeNest.
           </p>
 
           <div className="owner-email-form cta">

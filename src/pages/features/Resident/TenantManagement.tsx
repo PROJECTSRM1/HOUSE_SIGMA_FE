@@ -150,7 +150,7 @@ const TenantManagement = () => {
 
       {/* WHY SECTION */}
       <section className="tenant-why">
-        <h2 className="tenant-section-title">Why Choose HouseSigma Tenant Management?</h2>
+        <h2 className="tenant-section-title">Why Choose HomeNestenant Management?</h2>
 
         <div className="tenant-why-grid">
           <div className="tenant-why-card">
@@ -422,7 +422,7 @@ const TenantManagement = () => {
             </div>
           </div>
         </div>
-        <p className="tenant-stats-note">Based on HouseSigma internal data from 2024</p>
+        <p className="tenant-stats-note">Based on HomeNest internal data from 2024</p>
       </section>
 
       {/* HOW IT WORKS */}

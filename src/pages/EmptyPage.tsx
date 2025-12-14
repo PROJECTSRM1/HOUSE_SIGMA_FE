@@ -10,7 +10,7 @@ interface EmptyPageProps {
 const EmptyPage = ({ title }: EmptyPageProps) => {
   return (
     <>
-      <Navbar onLoginClick={() => {}} />
+      <Navbar />
       <main className="min-h-screen pt-[4.5rem] flex items-center justify-center bg-secondary">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold text-navy mb-4">{title}</h1>

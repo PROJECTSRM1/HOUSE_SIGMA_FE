@@ -108,10 +108,10 @@ const FinancialReports = () => {
         </div>
       </section>
 
-      {/* Why HouseSigma Section */}
+      {/* Why HomeNest Section */}
       <section className="reports-why">
         <div className="reports-container">
-          <motion.h2 {...fadeInUp}>Why HouseSigma Reports?</motion.h2>
+          <motion.h2 {...fadeInUp}>Why HomeNest Reports?</motion.h2>
           
           <div className="reports-why-grid">
             <motion.div 
@@ -291,7 +291,7 @@ const FinancialReports = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2>The HouseSigma advantage</h2>
+              <h2>The HomeNest advantage</h2>
               <p>
                 Empowering real estate professionals with the most comprehensive market 
                 data and analytics platform in Canada. Make confident decisions backed 
@@ -366,7 +366,7 @@ const FinancialReports = () => {
                 </svg>
               </div>
               <blockquote>
-                HouseSigma's reports have transformed how I analyze the market. I can generate 
+                HomeNest's reports have transformed how I analyze the market. I can generate 
                 detailed neighborhood comparisons for my clients in minutes, showing them exactly 
                 why a property is priced right. The hyperlocal data is unmatched.
               </blockquote>
@@ -403,7 +403,7 @@ const FinancialReports = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    HouseSigma offers over 40 different report types including market trend analysis, 
+                    HomeNest offers over 40 different report types including market trend analysis, 
                     comparative market analysis (CMA), neighborhood statistics, price-per-square-foot 
                     reports, investment ROI calculators, days-on-market analysis, and custom portfolio 
                     performance reports.
@@ -488,7 +488,7 @@ const FinancialReports = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    HouseSigma covers all major Canadian markets including Toronto (GTA), Vancouver 
+                    HomeNest covers all major Canadian markets including Toronto (GTA), Vancouver 
                     (Greater Vancouver), Calgary, Edmonton, Ottawa, Montreal, and many smaller cities. 
                     We integrate with provincial MLS systems for comprehensive coverage.
                   </motion.p>
@@ -544,7 +544,7 @@ const FinancialReports = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Yes! The HouseSigma mobile app (iOS and Android) gives you full access to all 
+                    Yes! The HomeNestobile app (iOS and Android) gives you full access to all 
                     reports, real-time market data, and analytics on the go. Generate and share 
                     reports directly from your phone while showing properties.
                   </motion.p>

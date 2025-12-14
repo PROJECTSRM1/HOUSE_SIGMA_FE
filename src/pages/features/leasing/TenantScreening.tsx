@@ -165,11 +165,11 @@ const TenantScreening = () => {
       </section>
 
       {/* Why Section */}
-       {/* WHY HOUSESIGMA */}
+       {/* WHY HomeNest/}
 <section className="list-why">
   <div className="list-container">
     <h2>
-      Why HouseSigma
+      Why HomeNest
     </h2>
 
     <div className="list-why-grid">
@@ -303,7 +303,7 @@ const TenantScreening = () => {
         <div className="list-container">
           <div className="list-stats-content">
             <div className="list-stats-text">
-              <h2>The HouseSigma effect</h2>
+              <h2>The HomeNest effect</h2>
               <p>Delivering the features you need with the results you've been waiting for. Now that's smarter property management.</p>
               <button className="list-btn" onClick={() => setIsAuthModalOpen(true)}>
                 See It In Action <ArrowRight size={16} />
@@ -416,7 +416,7 @@ const TenantScreening = () => {
   <div className="list-container">
     <h3>Serious about property management?</h3>
     <p>
-      Join thousands of property managers who trust HouseSigma for tenant screening.
+      Join thousands of property managers who trust HomeNest for tenant screening.
     </p>
 
     <div className="footer-cta-form">

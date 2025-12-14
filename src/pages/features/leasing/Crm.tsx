@@ -150,7 +150,7 @@ const faqData = [
 
     {/* TITLE – SAME STYLE AS "Why DoorLoop?" */}
     <h2 className="es-section-title center">
-      Why HouseSigma?
+      Why HomeNest?
     </h2>
 
     <div className="es-why-grid">
@@ -241,7 +241,7 @@ const faqData = [
         <div className="list-container">
           <div className="list-stats-content">
             <div className="list-stats-text">
-              <h2>The HouseSigma effect</h2>
+              <h2>The HomeNest effect</h2>
               <p>Delivering the features you need with the results you've been waiting for. Now that's smarter property management.</p>
               <button className="list-btn" onClick={() => setIsAuthModalOpen(true)}>
                 See It In Action <ArrowRight size={16} />

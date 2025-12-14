@@ -272,7 +272,7 @@ const RentersInsurance = () => {
 
       {/* WHY CHOOSE US */}
       <section className="insurance-why">
-        <h2 className="insurance-section-title">Why choose HouseSigma Insurance?</h2>
+        <h2 className="insurance-section-title">Why choose HomeNest Insurance?</h2>
 
         <div className="insurance-why-grid">
           <div className="insurance-why-card">
@@ -511,7 +511,7 @@ const RentersInsurance = () => {
           <Shield className="insurance-cta-icon" />
           <h2 className="insurance-cta-title">Get protected in minutes</h2>
           <p className="insurance-cta-text">
-            Join 150,000+ renters who trust HouseSigma for affordable, comprehensive coverage.
+            Join 150,000+ renters who trust HomeNest for affordable, comprehensive coverage.
           </p>
 
           <div className="insurance-email-form cta">

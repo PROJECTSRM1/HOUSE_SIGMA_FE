@@ -95,10 +95,10 @@ const Bookkeeping = () => {
         </div>
       </section>
 
-      {/* Why HouseSigma Section */}
+      {/* Why HomeNest Section */}
       <section className="bookkeeping-why">
         <div className="bookkeeping-container">
-          <motion.h2 {...fadeInUp}>Why choose HouseSigma for bookkeeping?</motion.h2>
+          <motion.h2 {...fadeInUp}>Why choose HomeNest for bookkeeping?</motion.h2>
           
           <div className="bookkeeping-why-grid">
             <motion.div 
@@ -259,7 +259,7 @@ const Bookkeeping = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2>The HouseSigma advantage</h2>
+              <h2>The HomeNest advantage</h2>
               <p>
                 Join thousands of Canadian real estate professionals who save time and 
                 increase profitability with automated bookkeeping built for property management.
@@ -296,12 +296,12 @@ const Bookkeeping = () => {
               
               <div className="bookkeeping-stat-card purple">
                 <Users className="bookkeeping-stat-icon purple" size={32} />
-                <span>Real Estate Professionals Using HouseSigma</span>
+                <span>Real Estate Professionals Using HomeNest</span>
                 <strong>10,000+</strong>
               </div>
               
               <p className="bookkeeping-stats-note">
-                Based on HouseSigma user surveys across Canada. Results may vary.
+                Based on HomeNest user surveys across Canada. Results may vary.
               </p>
             </motion.div>
           </div>
@@ -333,7 +333,7 @@ const Bookkeeping = () => {
                 </svg>
               </div>
               <blockquote>
-                HouseSigma's bookkeeping has transformed how I manage my 
+                HomeNest's bookkeeping has transformed how I manage my 
                 property portfolio in Toronto. The automated categorization saves 
                 me hours every week, and the tax reports make filing season a breeze. 
                 It's built by people who understand Canadian real estate.
@@ -359,7 +359,7 @@ const Bookkeeping = () => {
               transition={{ duration: 0.4 }}
             >
               <div className="bookkeeping-faq-question" onClick={() => toggleFaq(0)}>
-                <h4>What makes HouseSigma bookkeeping different?</h4>
+                <h4>What makes HomeNestBookkeeping different?</h4>
                 <ChevronDown size={20} className={`faq-arrow ${openFaq === 0 ? 'open' : ''}`} />
               </div>
               <AnimatePresence>
@@ -371,7 +371,7 @@ const Bookkeeping = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    HouseSigma is built specifically for Canadian real estate professionals. 
+                    HomeNest is built specifically for Canadian real estate professionals. 
                     We understand property transactions, MLS data, commission structures, and 
                     provincial tax requirements (GST/HST/PST). Our platform automates what 
                     generic accounting software makes manual.
@@ -400,7 +400,7 @@ const Bookkeeping = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Absolutely! HouseSigma supports properties across Ontario, Alberta, and 
+                    Absolutely! HomeNestupports properties across Ontario, Alberta, and 
                     British Columbia. Track each property separately with province-specific 
                     tax calculations, or view consolidated reports for your entire portfolio.
                   </motion.p>
@@ -428,7 +428,7 @@ const Bookkeeping = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    HouseSigma automatically calculates real estate commissions based on your 
+                    HomeNestutomatically calculates real estate commissions based on your 
                     brokerage split structure. Track buyer and seller side commissions, referral 
                     fees, and team splits. Generate detailed commission reports for each transaction.
                   </motion.p>
@@ -444,7 +444,7 @@ const Bookkeeping = () => {
               transition={{ duration: 0.4, delay: 0.3 }}
             >
               <div className="bookkeeping-faq-question" onClick={() => toggleFaq(3)}>
-                <h4>Is HouseSigma compliant with CRA requirements?</h4>
+                <h4>Is HomeNestompliant with CRA requirements?</h4>
                 <ChevronDown size={20} className={`faq-arrow ${openFaq === 3 ? 'open' : ''}`} />
               </div>
               <AnimatePresence>
@@ -456,7 +456,7 @@ const Bookkeeping = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Yes! HouseSigma generates CRA-compliant reports for income tax filing, 
+                    Yes! HomeNest generates CRA-compliant reports for income tax filing, 
                     including T776 (Statement of Real Estate Rentals) support. Our GST/HST 
                     tracking ensures you're audit-ready with proper documentation.
                   </motion.p>
@@ -484,7 +484,7 @@ const Bookkeeping = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Yes! HouseSigma supports importing from QuickBooks, Excel, and CSV files. 
+                    Yes! HomeNest supports importing from QuickBooks, Excel, and CSV files. 
                     Our migration team can help transfer your historical data to ensure a 
                     smooth transition without losing any financial records.
                   </motion.p>
