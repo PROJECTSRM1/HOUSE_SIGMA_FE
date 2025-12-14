@@ -14,11 +14,16 @@ const portfolioTypes = [
     icon: Building,
     items: ['Office Buildings', 'Retail Spaces', 'Industrial Properties'],
   },
-];
-
-const portfolioBottom = [
-  { title: 'Community Associations', icon: Landmark },
-  { title: 'Affordable Housing', icon: Heart },
+  {
+    title: 'Community Associations',
+    icon: Landmark,
+    items: ['HOA Management', 'Condo Associations', 'Property Oversight'],
+  },
+  {
+    title: 'Affordable Housing',
+    icon: Heart,
+    items: ['Low-Income Housing', 'Subsidized Units', 'Social Housing'],
+  },
 ];
 
 const whyChooseItems = [
@@ -52,56 +57,70 @@ const PortfolioSection = () => {
   return (
     <section className="portfolio">
       <div className="portfolio-container">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="portfolio-section"
-        >
-          <h2 className="portfolio-title">Portfolio Types</h2>
-          <p className="portfolio-description">
-            House Sigma supports a variety of real estate portfolios:
-          </p>
+        {/* Left Section - Portfolio Types */}
+        <div className="portfolio-section">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="portfolio-title">Portfolio Types</h2>
+          </motion.div>
 
-          <div className="portfolio-grid">
+          <motion.p
+            className="portfolio-description"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Home Nest supports a variety of real estate portfolios:
+          </motion.p>
+
+          {/* Portfolio Type Cards - 2 per row, 4 total */}
+          <div className="portfolio-cards-grid">
             {portfolioTypes.map((type, index) => (
-              <div key={index} className="portfolio-item">
-                <div className="portfolio-item-header">
+              <motion.div
+                key={index}
+                className="portfolio-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+              >
+                <div className="portfolio-card-header">
                   <type.icon />
-                  {type.title}
+                  <span>{type.title}</span>
                 </div>
-                <ul className="portfolio-item-list">
+
+                <ul className="portfolio-card-list">
                   {type.items.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
+        </div>
 
-          <div className="portfolio-bottom">
-            {portfolioBottom.map((item, index) => (
-              <div key={index} className="portfolio-bottom-item">
-                <item.icon />
-                {item.title}
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
+        {/* Right Section - Why Choose */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
           className="why-choose"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h3 className="why-choose-title">Why Choose House Sigma</h3>
+          <h2 className="why-choose-title">Why Choose Home Nest</h2>
           
           <div className="why-choose-grid">
             {whyChooseItems.map((item, index) => (
-              <Link key={index} to={item.link} className="why-choose-item">
+              <Link
+                key={index}
+                to={item.link}
+                className="why-choose-item"
+              >
                 <div className="why-choose-item-header">
                   <item.icon />
                   {item.title}

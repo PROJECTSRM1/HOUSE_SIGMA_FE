@@ -26,7 +26,7 @@ const Alberta = () => {
        <AbHero  />
       <FilterBar />
       
-      <PropertySection title="Newly Added to HouseSigma" properties={newlyAdded} />
+      <PropertySection title="Newly Added to HomeNest" properties={newlyAdded} />
       <PropertySection title="Best For Schools" properties={bestForSchools} />
       <PropertySection title="Featured Listings" properties={featuredListings} />
       <PropertySection title="High Growth" properties={highGrowth} />

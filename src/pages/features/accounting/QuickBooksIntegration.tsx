@@ -116,7 +116,7 @@ const QuickBooksIntegration = () => {
       {/* WHY */}
       <section className="bank-sync-why">
         <div className="bank-sync-container">
-          <motion.h2 {...fadeInUp}>Why Housesigma</motion.h2>
+          <motion.h2 {...fadeInUp}>Why HomeNest</motion.h2>
 
           <div className="bank-sync-why-grid">
             <motion.div
@@ -274,7 +274,7 @@ const QuickBooksIntegration = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
             >
-              <h2>The housesigma effect</h2>
+              <h2>The HomeNest effect</h2>
               <p>
                 Delivering the features you need with the results you've been
                 waiting for. Now that's smarter property management.

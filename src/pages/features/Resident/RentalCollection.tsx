@@ -148,7 +148,7 @@ const RentalCollection = () => {
 
       {/* WHY SECTION */}
       <section className="rental-why">
-        <h2 className="rental-section-title">Why Choose HouseSigma Payments?</h2>
+        <h2 className="rental-section-title">Why Choose HomeNest Payments?</h2>
 
         <div className="rental-why-grid">
           <div className="rental-why-card">
@@ -405,7 +405,7 @@ const RentalCollection = () => {
             </div>
           </div>
         </div>
-        <p className="rental-stats-note">Based on HouseSigma internal data from 2024</p>
+        <p className="rental-stats-note">Based on HomeNest internal data from 2024</p>
       </section>
 
       {/* HOW IT WORKS */}

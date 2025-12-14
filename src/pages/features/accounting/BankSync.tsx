@@ -84,7 +84,7 @@ const BankSync = () => {
             >
               <div className="bank-sync-video-placeholder">
                 <h3>Bank Sync</h3>
-                <p>With HouseSigma</p>
+                <p>With HomeNest</p>
                 <div className="bank-sync-play-btn">
                   <Play size={28} fill="white" />
                 </div>
@@ -94,10 +94,10 @@ const BankSync = () => {
         </div>
       </section>
 
-      {/* Why HouseSigma Section */}
+      {/* Why HomeNestection */}
       <section className="bank-sync-why">
         <div className="bank-sync-container">
-          <motion.h2 {...fadeInUp}>Why HouseSigma?</motion.h2>
+          <motion.h2 {...fadeInUp}>Why HomeNest</motion.h2>
           
           <div className="bank-sync-why-grid">
             <motion.div 
@@ -112,7 +112,7 @@ const BankSync = () => {
               </div>
               <h3>Surprisingly simple</h3>
               <p>
-                Connect your accounts with a few clicks. HouseSigma does the rest—matching, 
+                Connect your accounts with a few clicks. HomeNest does the rest—matching, 
                 categorizing, and reconciling automatically.
               </p>
             </motion.div>
@@ -174,7 +174,7 @@ const BankSync = () => {
               <h3>Connect any bank account</h3>
               <p>
                 Pull, categorize, and reconcile your transactions in seconds by 
-                connecting your bank account or credit card to HouseSigma through Plaid.
+                connecting your bank account or credit card to HomeNest through Plaid.
               </p>
               <div className="bank-sync-feature-image">
                 <Landmark size={64} className="feature-icon blue" />
@@ -190,7 +190,7 @@ const BankSync = () => {
             >
               <h3>Auto-match transactions</h3>
               <p>
-                Stop guessing. HouseSigma automatically matches payments and deposits 
+                Stop guessing. HomeNest automatically matches payments and deposits 
                 in real-time, keeping your books accurate without manual work.
               </p>
               <div className="bank-sync-feature-image">
@@ -252,7 +252,7 @@ const BankSync = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2>The HouseSigma effect</h2>
+              <h2>The HomeNest effect</h2>
               <p>
                 Delivering the features you need with the results you've been waiting for. 
                 Now that's smarter property management.
@@ -294,7 +294,7 @@ const BankSync = () => {
               </div>
               
               <p className="bank-sync-stats-note">
-                Based on HouseSigma user surveys. Results may vary.
+                Based on HomeNest user surveys. Results may vary.
               </p>
             </motion.div>
           </div>
@@ -365,7 +365,7 @@ const BankSync = () => {
                     transition={{ duration: 0.3 }}
                   >
                     Powered by Plaid, bank sync allows you to integrate your bank account, 
-                    credit card, or debit card with HouseSigma so that you can easily categorize 
+                    credit card, or debit card with HomeNest so that you can easily categorize 
                     and reconcile transactions for your properties.
                   </motion.p>
                 )}
@@ -463,7 +463,7 @@ const BankSync = () => {
               transition={{ duration: 0.4, delay: 0.4 }}
             >
               <div className="bank-sync-faq-question" onClick={() => toggleFaq(4)}>
-                <h4>What if there's a transaction I don't want to keep in HouseSigma?</h4>
+                <h4>What if there's a transaction I don't want to keep in HomeNest?</h4>
                 <ChevronDown size={20} className={`faq-arrow ${openFaq === 4 ? 'open' : ''}`} />
               </div>
               <AnimatePresence>
@@ -475,7 +475,7 @@ const BankSync = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Each transaction that syncs over from your bank to HouseSigma has an 
+                    Each transaction that syncs over from your bank to HomeNest has an 
                     "Exclude" option. Simply click this option next to the transaction you want 
                     to remove, and it will be excluded.
                   </motion.p>
@@ -491,7 +491,7 @@ const BankSync = () => {
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               <div className="bank-sync-faq-question" onClick={() => toggleFaq(5)}>
-                <h4>How do I transfer transactions from my bank to HouseSigma?</h4>
+                <h4>How do I transfer transactions from my bank to HomeNest?</h4>
                 <ChevronDown size={20} className={`faq-arrow ${openFaq === 5 ? 'open' : ''}`} />
               </div>
               <AnimatePresence>
@@ -503,9 +503,9 @@ const BankSync = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Once your bank account is synced to HouseSigma, any new transactions from 
+                    Once your bank account is synced to HomeNest, any new transactions from 
                     your bank account will be automatically available to be reviewed in 
-                    HouseSigma. This process makes the process easy for you by ensuring 
+                    HomeNest. This process makes the process easy for you by ensuring 
                     accurate categorization and automating much of a previously manual task.
                   </motion.p>
                 )}

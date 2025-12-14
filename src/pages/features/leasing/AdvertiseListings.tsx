@@ -47,7 +47,7 @@ const AdvertiseListings = () => {
     },
     {
       img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop",
-      quote: "HouseSigma is different from other platforms — the biggest difference? Direct communication with tenants and seamless integrations.",
+      quote: "HomeNest is different from other platforms — the biggest difference? Direct communication with tenants and seamless integrations.",
       author: "Chris Lambu",
       role: "CEO, Lambu Management"
     },
@@ -72,14 +72,14 @@ const AdvertiseListings = () => {
     setTestimonialIndex((prev) => (prev + 1) % testimonials.length);
 
   const faqData = [
-    { q: "How do I advertise my rental properties for free?", a: "Simply create a listing in HouseSigma and we'll automatically syndicate it to major rental sites like Zillow, Trulia, and HotPads at no extra cost." },
+    { q: "How do I advertise my rental properties for free?", a: "Simply create a listing in HomeNest we'll automatically syndicate it to major rental sites like Zillow, Trulia, and HotPads at no extra cost." },
     { q: "Why should I advertise my own rental properties?", a: "Advertising your own properties gives you direct control over the listing, faster responses to inquiries, and helps you find quality tenants quickly." },
-    { q: "Can I charge tenants application fees through HouseSigma?", a: "Yes, you can set up application fees that go directly to your account, helping offset screening costs." },
-    { q: "Does it cost money to list my units online?", a: "No, listing your units on major rental sites through HouseSigma is completely free." },
-    { q: "How do I list my vacant units on other websites?", a: "Once you create a listing in HouseSigma, simply enable syndication and your listing will appear on partner sites automatically." },
+    { q: "Can I charge tenants application fees through HomeNest?", a: "Yes, you can set up application fees that go directly to your account, helping offset screening costs." },
+    { q: "Does it cost money to list my units online?", a: "No, listing your units on major rental sites through HomeNest is completely free." },
+    { q: "How do I list my vacant units on other websites?", a: "Once you create a listing in HomeNest, simply enable syndication and your listing will appear on partner sites automatically." },
     { q: "What is a custom website?", a: "A custom website is your own branded property management site where tenants can view listings, apply, and access their tenant portal." },
-    { q: "How do I get my units to show up on Zillow, Trulia & HotPads?", a: "Enable listing syndication in your HouseSigma dashboard and your units will automatically appear on these platforms within 24-48 hours." },
-    { q: "How do I update listing information everywhere at once?", a: "Simply update your listing in HouseSigma and all syndicated listings will be updated automatically across all platforms." }
+    { q: "How do I get my units to show up on Zillow, Trulia & HotPads?", a: "Enable listing syndication in your HomeNest dashboard and your units will automatically appear on these platforms within 24-48 hours." },
+    { q: "How do I update listing information everywhere at once?", a: "Simply update your listing in HomeNest and all syndicated listings will be updated automatically across all platforms." }
   ];
 
   return (
@@ -164,11 +164,11 @@ const AdvertiseListings = () => {
         </div>
       </section>
 
-      {/* WHY HOUSESIGMA */}
+      {/* WHY HomeNest */}
       <section className="list-why">
         <div className="list-container">
           <motion.h2 {...fadeInUp}>
-            Why HouseSigma
+            Why HomeNest
           </motion.h2>
 
           <div className="list-why-grid">
@@ -226,7 +226,7 @@ const AdvertiseListings = () => {
             <motion.div className="list-feature-card blue" {...fadeInUp}>
               <div>
                 <h3>Instant updates</h3>
-                <p>Edit listings in HouseSigma and see your changes synced across every listing site.</p>
+                <p>Edit listings in HomeNest and see your changes synced across every listing site.</p>
               </div>
               <div className="list-feature-img">
                 <img
@@ -318,7 +318,7 @@ const AdvertiseListings = () => {
         <div className="list-container">
           <div className="list-stats-content">
             <div className="list-stats-text">
-              <h2>The HouseSigma effect</h2>
+              <h2>The HomeNest effect</h2>
               <p>Delivering the features you need with the results you've been waiting for. Now that's smarter property management.</p>
               <button className="list-btn" onClick={() => setIsAuthModalOpen(true)}>
                 See It In Action <ArrowRight size={16} />
@@ -542,7 +542,7 @@ const AdvertiseListings = () => {
           <p>
             Save more time. Manage more units. Unlock more growth.
             <br />
-            Choose HouseSigma's property management software.
+            Choose HomeNest's property management software.
           </p>
 
           <div className="footer-cta-form">

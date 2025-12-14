@@ -13,11 +13,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="brandColumn">
             <div className="logo">
-              <span className="brandName">HouseSigma</span>
+              <span className="brandName">HomeNest</span>
             </div>
 
             <p className="brandDescription">
-              HouseSigma is a leading technology platform that utilizes artificial
+              HomeNest is a leading technology platform that utilizes artificial
               intelligence technology to estimate Canadian home values in real time.
             </p>
 

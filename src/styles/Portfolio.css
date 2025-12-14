@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 5rem 0;
+  padding: 2rem 0 5rem 0;
   background: hsl(var(--background));
 }
 
@@ -10,11 +10,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: start;
+  align-items: flex-start; /* ✅ important */
 }
 
+/* ================================
+   LEFT: PORTFOLIO SECTION
+================================ */
 .portfolio-section {
-  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem; /* ✅ same top start as right */
 }
 
 .portfolio-title {
@@ -30,78 +35,69 @@
   margin-bottom: 2rem;
 }
 
-.portfolio-grid {
+/* Portfolio Cards */
+.portfolio-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.portfolio-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.portfolio-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
 }
 
-.portfolio-item-header {
+.portfolio-card:hover {
+  border-color: rgba(30, 74, 122, 0.3);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.portfolio-card-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: hsl(var(--navy));
+  margin-bottom: 1rem;
 }
 
-.portfolio-item-header svg {
-  width: 1.25rem;
-  height: 1.25rem;
+.portfolio-card-header svg {
+  width: 1.5rem;
+  height: 1.5rem;
   color: #1e4a7a;
 }
 
-.portfolio-item-list {
+.portfolio-card-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.portfolio-item-list li {
-  padding: 0.25rem 0;
-  font-size: 0.875rem;
+.portfolio-card-list li {
+  font-size: 0.9375rem;
   color: hsl(var(--muted-foreground));
+  line-height: 1.5;
 }
 
-.portfolio-item-list li::before {
-  content: '-';
+.portfolio-card-list li::before {
+  content: "-";
   margin-right: 0.5rem;
   color: hsl(var(--border));
 }
 
-.portfolio-bottom {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid hsl(var(--border));
-}
-
-.portfolio-bottom-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  color: hsl(var(--muted-foreground));
-}
-
-.portfolio-bottom-item svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #1e4a7a;
-}
-
-/* Why Choose Section */
+/* ================================
+   RIGHT: WHY CHOOSE SECTION
+================================ */
 .why-choose {
   background: hsl(var(--secondary));
   border-radius: calc(var(--radius) + 4px);
   padding: 2rem;
+  margin-top: 2rem; /* ✅ matches left side start */
 }
 
 .why-choose-title {
@@ -115,6 +111,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .why-choose-item {
@@ -129,6 +126,7 @@
 .why-choose-item:hover {
   border-color: rgba(30, 74, 122, 0.3);
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .why-choose-item-header {
@@ -150,7 +148,6 @@
 .why-choose-item p {
   font-size: 0.8125rem;
   color: hsl(var(--muted-foreground));
-  line-height: 1.5;
   margin: 0;
 }
 
@@ -158,42 +155,35 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: hsl(var(--primary-foreground));
+  color: white;
   background: #1e4a7a;
-  border: none;
   border-radius: var(--radius);
-  cursor: pointer;
-  transition: all 0.2s ease;
   text-decoration: none;
 }
 
-.why-choose-contact:hover {
-  background: #163a61;
-}
-
-.why-choose-contact svg {
-  width: 1rem;
-  height: 1rem;
-}
-
+/* ================================
+   RESPONSIVE
+================================ */
 @media (max-width: 1024px) {
   .portfolio-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
-  .portfolio-section {
-    padding-right: 0;
+  .why-choose {
+    margin-top: 0;
   }
 }
 
 @media (max-width: 640px) {
-  .portfolio-grid,
+  .portfolio-cards-grid,
   .why-choose-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-title {
+    font-size: 1.5rem;
   }
 }

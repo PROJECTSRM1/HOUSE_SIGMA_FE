@@ -1,5 +1,5 @@
 .features {
-  padding: 5rem 0;
+  padding: 5rem 0 2rem 0;
   background: linear-gradient(180deg, hsl(var(--sky-gradient-start)) 0%, hsl(var(--background)) 100%);
 }
 

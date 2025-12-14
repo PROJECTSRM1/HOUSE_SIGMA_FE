@@ -157,7 +157,7 @@ const MobileApp = () => {
 
       {/* WHY SECTION */}
       <section className="mobile-why">
-        <h2 className="mobile-section-title">Why HouseSigma Mobile App?</h2>
+        <h2 className="mobile-section-title">Why HomeNest Mobile App?</h2>
 
         <div className="mobile-why-grid">
           <div className="mobile-why-card">
@@ -357,7 +357,7 @@ const MobileApp = () => {
           <div>
             <h2 className="mobile-section-title">Trusted by home buyers across Canada</h2>
             <p className="mobile-stats-text">
-              Join millions of Canadians using HouseSigma to find their perfect home and make smarter real estate decisions.
+              Join millions of Canadians using HomeNesto find their perfect home and make smarter real estate decisions.
             </p>
             <button className="mobile-btn-primary sm">
               Get Started <ArrowRight />
@@ -445,7 +445,7 @@ const MobileApp = () => {
         <div className="mobile-faq-grid">
           {[
             {
-              q: "Is the HouseSigma app free to use?",
+              q: "Is the HomeNest app free to use?",
               a: "Yes! The app is completely free to download and use. You get full access to all property listings, market data, and features without any subscription or hidden fees.",
             },
             {
@@ -458,7 +458,7 @@ const MobileApp = () => {
             },
             {
               q: "Does the app work across Canada?",
-              a: "Yes! HouseSigma covers all major Canadian cities and regions including Toronto, Vancouver, Calgary, Ottawa, Montreal, and many more markets across the country.",
+              a: "Yes! HomeNest covers all major Canadian cities and regions including Toronto, Vancouver, Calgary, Ottawa, Montreal, and many more markets across the country.",
             },
             {
               q: "Can I access sold property data?",
@@ -486,7 +486,7 @@ const MobileApp = () => {
           <Smartphone className="cta-phone-icon" />
           <h2 className="mobile-cta-title">Ready to find your dream home?</h2>
           <p className="mobile-cta-text">
-            Download the HouseSigma app today and join 2.5M+ users searching smarter.
+            Download the HomeNest app today and join 2.5M+ users searching smarter.
           </p>
 
           <div className="mobile-download-buttons">

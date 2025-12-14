@@ -150,7 +150,7 @@ const CommunicationTools = () => {
 
       {/* WHY SECTION */}
       <section className="comm-why">
-        <h2 className="comm-section-title">Why Agents Choose HouseSigma</h2>
+        <h2 className="comm-section-title">Why Agents Choose HomeNest</h2>
 
         <div className="comm-why-grid">
           <div className="comm-why-card">
@@ -482,7 +482,7 @@ const CommunicationTools = () => {
             </div>
           </div>
         </div>
-        <p className="comm-stats-note">Based on HouseSigma user data from 2024</p>
+        <p className="comm-stats-note">Based on HomeNest user data from 2024</p>
       </section>
 
       {/* HOW IT WORKS */}

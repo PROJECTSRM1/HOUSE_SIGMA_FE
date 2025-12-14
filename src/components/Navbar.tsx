@@ -169,7 +169,7 @@ const Navbar = () => {
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2z" />
           </svg>
-          HouseSigma
+          HomeNest
         </Link>
 
         {/* DESKTOP NAV */}
@@ -252,10 +252,10 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Why HouseSigma */}
+          {/* Why HomeNest */}
           <div className="navbar-item">
             <button className="navbar-link">
-              Why HouseSigma <ChevronDown />
+              Why HomeNest <ChevronDown />
             </button>
             <div className="dropdown-menu">
               {whyMenu.map(item => (
@@ -450,13 +450,13 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Why HouseSigma Dropdown */}
+              {/* Why HomeNest Dropdown */}
               <div className="mobile-dropdown">
                 <button 
                   className="mobile-dropdown-trigger"
                   onClick={() => toggleMobileDropdown('why')}
                 >
-                  Why HouseSigma
+                  Why HomeNest
                   <ChevronRight className={`mobile-dropdown-icon ${openMobileDropdown === 'why' ? 'open' : ''}`} />
                 </button>
                 

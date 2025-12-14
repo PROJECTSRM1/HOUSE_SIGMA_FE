@@ -29,7 +29,7 @@ export interface Property {
 }
 
 /* ======================================================
-   1. Newly Added to HouseSigma
+   1. Newly Added to HomeNest
 ====================================================== */
 export const newlyAdded: Property[] = [
   {
@@ -141,7 +141,7 @@ export const featuredListings: Property[] = [
     status: "For Sale",
     badge: "Featured",
     listed: "26 days",
-    agent: "Jay S Sandhu, HouseSigma Inc"
+    agent: "Jay S Sandhu, HomeNest Inc"
   },
   {
     id: 8,
@@ -156,7 +156,7 @@ export const featuredListings: Property[] = [
     status: "For Sale",
     badge: "Featured",
     listed: "26 days",
-    agent: "Jay S Sandhu, HouseSigma Inc"
+    agent: "Jay S Sandhu, HomeNest Inc"
   },
   {
     id: 9,
@@ -171,7 +171,7 @@ export const featuredListings: Property[] = [
     status: "For Sale",
     badge: "Featured",
     listed: "09-05-2025",
-    agent: "Jay S Sandhu, HouseSigma Inc"
+    agent: "Jay S Sandhu, HomeNest Inc"
   }
 ];
 

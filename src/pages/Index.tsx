@@ -14,11 +14,11 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>HouseSigma - Streamline Your Property Management</title>
-        <meta name="description" content="Explore all the tools you need for efficient and streamlined property management with HouseSigma." />
+        <title>HomeNest Streamline Your Property Management</title>
+        <meta name="description" content="Explore all the tools you need for efficient and streamlined property management with HomeNest." />
       </Helmet>
       
-      <Navbar onLoginClick={() => setIsAuthModalOpen(true)} />
+      <Navbar  />
       <main>
         <HeroSlider />
         <FeaturesSection />
