@@ -8,7 +8,18 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import EmptyPage from "./pages/EmptyPage";
+
+/* ================= ACCOUNTING PAGES ================= */
 import BankSync from "./pages/features/accounting/BankSync";
+import QuickBooksIntegration from "./pages/features/accounting/QuickBooksIntegration";
+
+/* ================= LEASING PAGES ================= */
+import AdvertiseListings from "./pages/features/leasing/AdvertiseListings";
+import ApplicationsEsign from "./pages/features/leasing/ApplicationsEsign";
+import TenantScreening from "./pages/features/leasing/TenantScreening";
+import Crm from "./pages/features/leasing/Crm";
+
+/* ================= CONTEXT ================= */
 import Maintenance from "./pages/features/operations/maintenance";
 import MobileApp from "./pages/features/operations/MobileApp";
 import OwnerPortal from "./pages/features/operations/OwnerPortal";
@@ -42,6 +53,39 @@ const App = () => (
         <BrowserRouter>
           <AuthModalProvider>
             <Routes>
+
+              {/* ================= ACCOUNTING ROUTES ================= */}
+              <Route
+                path="/features/accounting/bank-sync"
+                element={<BankSync />}
+              />
+
+              <Route
+                path="/features/accounting/quickbooks-integration"
+                element={<QuickBooksIntegration />}
+              />
+
+              {/* ================= LEASING ROUTES ================= */}
+              <Route
+                path="/features/leasing/advertise-listings"
+                element={<AdvertiseListings />}
+              />
+
+              <Route
+                path="/features/leasing/applications-esign"
+                element={<ApplicationsEsign />}
+              />
+
+              <Route
+                path="/features/leasing/tenant-screening"
+                element={<TenantScreening />}
+              />
+
+              <Route
+                path="/features/leasing/crm"
+                element={<Crm />}
+              />
+
               {/* Root */}
               <Route path="/" element={<Index />} />
 
