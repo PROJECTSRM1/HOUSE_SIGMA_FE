@@ -9,7 +9,6 @@ import "./MarketTrends.css";
 // Icons
 import { TrendingDown, TrendingUp } from "lucide-react";
 
-
 // Recharts
 import {
   ComposedChart,
@@ -281,11 +280,10 @@ function applyFiltersToSeries(
   multiplier,
   withPredictions
 ) {
-  // ✔ Dynamic slicing so 5/10/15 years actually change the dataset
   const pointsForYears =
-    selectedYears === 5 ? 4 :      // Last 4 points
-    selectedYears === 10 ? 8 :     // Last 8 points
-    12;                            // Last 12 points
+    selectedYears === 5 ? 4 :
+    selectedYears === 10 ? 8 :
+    12;
 
   const sliced = series.length <= pointsForYears
     ? clone(series)
@@ -302,10 +300,8 @@ function applyFiltersToSeries(
   return multiplied;
 }
 
-
 /* ==========================
    COMPONENT: MarketFilters
-   (lifted-state compatible)
    ========================== */
 
 const MarketFilters = ({
@@ -363,7 +359,6 @@ const MarketFilters = ({
     "Link",
   ];
 
-
   return (
     <div className="market-filter-wrapper">
       <div className="market-filters">
@@ -388,7 +383,7 @@ const MarketFilters = ({
           </button>
         </div>
 
-        <div className="dropdown-container">
+        <div className="dropdown-container" style={{ position: 'relative', zIndex: openDropdown === "location" ? 1000 : 1 }}>
           <button
             className="filter-select"
             onClick={() =>
@@ -398,9 +393,30 @@ const MarketFilters = ({
             {location} ▾
           </button>
           {openDropdown === "location" && (
-            <div className="dropdown-menu">
+            <div className="dropdown-menu" style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              backgroundColor: 'white',
+              border: '1px solid #e0e0e0',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              minWidth: '250px',
+              maxHeight: '400px',
+              overflowY: 'auto',
+              marginTop: '4px',
+              padding: '8px 0',
+              zIndex: 1001
+            }}>
               {locations.map((loc) => (
-                <label className="dropdown-option" key={loc}>
+                <label className="dropdown-option" key={loc} style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '10px 16px',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s'
+                }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                   <input
                     type="radio"
                     name="location"
@@ -410,15 +426,16 @@ const MarketFilters = ({
                       setLocation(loc);
                       setOpenDropdown(null);
                     }}
+                    style={{ marginRight: '10px', cursor: 'pointer' }}
                   />
-                  <span>{loc}</span>
+                  <span style={{ fontSize: '14px', color: '#333' }}>{loc}</span>
                 </label>
               ))}
             </div>
           )}
         </div>
 
-        <div className="dropdown-container">
+        <div className="dropdown-container" style={{ position: 'relative', zIndex: openDropdown === "community" ? 1000 : 1 }}>
           <button
             className="filter-select"
             onClick={() =>
@@ -430,9 +447,30 @@ const MarketFilters = ({
             {community} ▾
           </button>
           {openDropdown === "community" && (
-            <div className="dropdown-menu">
+            <div className="dropdown-menu" style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              backgroundColor: 'white',
+              border: '1px solid #e0e0e0',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              minWidth: '250px',
+              maxHeight: '400px',
+              overflowY: 'auto',
+              marginTop: '4px',
+              padding: '8px 0',
+              zIndex: 1001
+            }}>
               {Community.map((c) => (
-                <label className="dropdown-option" key={c}>
+                <label className="dropdown-option" key={c} style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '10px 16px',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s'
+                }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                   <input
                     type="radio"
                     name="community"
@@ -442,15 +480,16 @@ const MarketFilters = ({
                       setCommunity(c);
                       setOpenDropdown(null);
                     }}
+                    style={{ marginRight: '10px', cursor: 'pointer' }}
                   />
-                  <span>{c}</span>
+                  <span style={{ fontSize: '14px', color: '#333' }}>{c}</span>
                 </label>
               ))}
             </div>
           )}
         </div>
 
-        <div className="dropdown-container">
+        <div className="dropdown-container" style={{ position: 'relative', zIndex: openDropdown === "property" ? 1000 : 1 }}>
           <button
             className="filter-select"
             onClick={() =>
@@ -462,9 +501,30 @@ const MarketFilters = ({
             {property} ▾
           </button>
           {openDropdown === "property" && (
-            <div className="dropdown-menu">
+            <div className="dropdown-menu" style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              backgroundColor: 'white',
+              border: '1px solid #e0e0e0',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              minWidth: '250px',
+              maxHeight: '400px',
+              overflowY: 'auto',
+              marginTop: '4px',
+              padding: '8px 0',
+              zIndex: 1001
+            }}>
               {Property.map((p) => (
-                <label className="dropdown-option" key={p}>
+                <label className="dropdown-option" key={p} style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '10px 16px',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s'
+                }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                   <input
                     type="radio"
                     name="property"
@@ -474,8 +534,9 @@ const MarketFilters = ({
                       setProperty(p);
                       setOpenDropdown(null);
                     }}
+                    style={{ marginRight: '10px', cursor: 'pointer' }}
                   />
-                  <span>{p}</span>
+                  <span style={{ fontSize: '14px', color: '#333' }}>{p}</span>
                 </label>
               ))}
             </div>
@@ -488,7 +549,6 @@ const MarketFilters = ({
 
 /* ==========================
    COMPONENT: MarketStats
-   (receives computed stats)
    ========================== */
 
 const formatCurrency = (v) => {
@@ -589,7 +649,6 @@ const MarketStats = ({
 
 /* ==========================
    COMPONENT: MarketCharts
-   (accepts datasets + chartHeight)
    ========================== */
 
 const MarketCharts = ({ datasets, chartHeight }) => {
@@ -811,7 +870,7 @@ const ContactForm = () => {
 };
 
 /* ==========================
-   MAIN PAGE: MarketTrends (final)
+   MAIN PAGE: MarketTrends
    ========================== */
 
 const chartHeight = 400;
@@ -828,7 +887,6 @@ const MarketTrends = () => {
     [location, community, property]
   );
 
-  // Prepare datasets for charts (with predictions)
   const datasets = useMemo(() => {
     const medianPriceData = applyFiltersToSeries(
       BASE.medianPriceData,
@@ -902,24 +960,15 @@ const MarketTrends = () => {
     };
   }, [selectedYears, multiplier, withPredictions]);
 
-  /* -------------------------
-     Dynamic Market Stats (UPDATED - AGGREGATED OVER SLICED DATA)
-     ------------------------- */
-
-  // datasets.* are already sliced & multiplied (and may include predicted points)
-  // For stats we ONLY want the real (non-predicted) points inside the sliced window:
   const medianSeries = datasets.medianPriceData.filter((d) => !d.__predicted);
   const listingsSeries = datasets.listingsData.filter((d) => !d.__predicted);
 
-  // If there's no data, keep behavior safe
   const hasMedian = medianSeries && medianSeries.length > 0;
   const hasListings = listingsSeries && listingsSeries.length > 0;
 
-  // Latest month = last record's month in the sliced series
   const latestMedianRec = hasMedian ? medianSeries[medianSeries.length - 1] : null;
   const latestMonth = latestMedianRec?.month ?? null;
 
-  // 1) Median Price shown as AVERAGE of medianPrice across the sliced window
   const avgMedian =
     hasMedian
       ? Math.round(
@@ -928,13 +977,11 @@ const MarketTrends = () => {
         )
       : null;
 
-  // 2) New Listings shown as SUM of 'new' across the sliced window
   const totalNewListings =
     hasListings
       ? listingsSeries.reduce((s, r) => s + (r.new ?? 0), 0)
       : null;
 
-  // 3) Percent changes: compare FIRST vs LAST in the sliced window
   const medianFirst = hasMedian ? medianSeries[0].medianPrice ?? null : null;
   const medianLast = hasMedian ? medianSeries[medianSeries.length - 1].medianPrice ?? null : null;
 
@@ -942,23 +989,17 @@ const MarketTrends = () => {
     if (first == null || last == null || first === 0) return null;
     return ((last - first) / first) * 100;
   };
-  // Changes are relative to the current sliced window:
-  // - 1y / 5y / 10y labels remain (UI), but they will all compute using the same window
-  //   the labels still make sense because the window changes when you click the tabs.
+
   const changeWindowPercent = computeChangeFromFirstToLast(medianFirst, medianLast);
 
-  // For display we keep three fields but they all reflect the chosen window
   const change1y = changeWindowPercent;
   const change5y = changeWindowPercent;
   const change10y = changeWindowPercent;
 
-  // Prepare values used in JSX
   const latestMedian = avgMedian;
   const latestNewListings = totalNewListings;
 
   const statsTitle = `Real Estate Market Trends – ${location}, ${community}, ${property}`;
-
-  const [openChat, setOpenChat] = useState(false);
 
   return (
     <div className="market-trends-page">
@@ -988,7 +1029,6 @@ const MarketTrends = () => {
                 statsTitle={statsTitle}
               />
 
-              {/* small controls for predictions */}
               <div className="predictions-controls">
                 <label className="predictions-checkbox">
                   <input
@@ -1003,16 +1043,7 @@ const MarketTrends = () => {
                 </div>
               </div>
 
-              <MarketCharts datasets={{
-                medianPriceData: datasets.medianPriceData,
-                popularityData: datasets.popularityData,
-                listingsData: datasets.listingsData,
-                priceDistributionData: datasets.priceDistributionData,
-                absorptionRateData: datasets.absorptionRateData,
-                rentRatioData: datasets.rentRatioData,
-                rentalPriceData: datasets.rentalPriceData,
-                propertyTypeData: datasets.propertyTypeData,
-              }} chartHeight={chartHeight} />
+              <MarketCharts datasets={datasets} chartHeight={chartHeight} />
 
               <ContactForm />
             </div>
