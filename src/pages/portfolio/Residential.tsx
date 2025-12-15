@@ -5,10 +5,11 @@ import {
   AccordionTrigger,
   AccordionContent
 } from "@/components/ui/accordion";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./Residential.css";
+import { useNavigate } from "react-router-dom";
 import img1 from '/assets/hero-residential.jpg';
 import img2 from  "/assets/digital.png";
 import img3 from '/assets/lease1.png';
@@ -34,9 +35,17 @@ import make from '/assets/make.webp';
 const ResidentialPage: React.FC = () => {
   // ---------------------- POPUP FEATURE LOGIC ----------------------
   const [activeFeature, setActiveFeature] = useState<any>(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+}, []);
 
   const FEATURES = [
-  {
+  { 
     id: 0,
     title: "Smart Listings & Market Visibility",
 
@@ -381,22 +390,32 @@ const ResidentialPage: React.FC = () => {
   <h2 className="portfolio-title">Other Portfolios</h2>
 
   <div className="portfolio-grid">
-    {[
-      "Residential",
-      "Multifamily",
-      "Commercial",
-      "Community Association",
-      "Affordable Housing"
-    ].map((item) => (
-      <button
-        key={item}
-        className={`portfolio-pill ${
-          item === "Commercial" ? "active" : ""
-        }`}
-      >
-        {item}
-      </button>
-    ))}
+    <button
+      className="portfolio-pill active"
+      onClick={() => navigate("/portfolio/residential")}
+    >
+      Residential
+    </button>
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/commercial")}
+    >
+      Commercial
+    </button>
+
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/community")}
+    >
+      Community Association
+    </button>
+
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/affordable")}
+    >
+      Affordable Housing
+    </button>
   </div>
 </section>
       <Footer />
