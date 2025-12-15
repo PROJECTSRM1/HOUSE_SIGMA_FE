@@ -1,9 +1,11 @@
-/* PAGE WRAPPER */
+/* QuickBooks Integration Page */
+
 .qb-page {
   min-height: 100vh;
+  background: white;
 }
 
-/* HERO SECTION */
+/* Hero Section */
 .qb-hero {
   background: linear-gradient(135deg, #f2f8ff 0%, #eef2ff 100%);
   padding: 6rem 0 4rem;
@@ -28,6 +30,7 @@
 .qb-breadcrumb a {
   color: #1f2a44;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .qb-breadcrumb a:hover {
@@ -73,11 +76,12 @@
   border-radius: 8px;
   font-size: 1rem;
   background: white;
+  transition: border-color 0.3s;
 }
 
 .qb-email-input:focus {
   outline: none;
-  border-color: #0fa783;
+  border-color: #1e4a7a;
 }
 
 .qb-btn {
@@ -89,11 +93,16 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .qb-btn:hover {
-  background: #0d8b6e;
+  background: #163a61;
+  transform: translateY(-2px);
 }
 
 .qb-rating {
@@ -126,7 +135,22 @@
 
 .qb-video-box {
   aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #0e2d4f 0%, #0fa783 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.qb-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qb-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,24 +158,20 @@
   color: white;
 }
 
-.qb-play-btn {
-  width: 64px;
-  height: 64px;
-  background: #0fa783;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+.qb-video-overlay h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-.qb-play-btn:hover {
-  transform: scale(1.1);
+.qb-video-overlay p {
+  font-size: 1.25rem;
+  opacity: 0.95;
 }
 
-/* WHY SECTION */
+
+
+/* Why Section */
 .qb-why {
   padding: 5rem 0;
   background: #f3f7fb;
@@ -176,6 +196,12 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qb-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .qb-why-icon {
@@ -194,8 +220,8 @@
 }
 
 .qb-why-icon.teal {
-  background: #d7f6f0;
-  color: #0fa783;
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .qb-why-icon.pink {
@@ -216,9 +242,10 @@
   line-height: 1.6;
 }
 
-/* FEATURES GRID */
+/* Features Grid */
 .qb-features {
   padding: 5rem 0;
+  background: white;
 }
 
 .qb-features-header {
@@ -233,6 +260,13 @@
   margin-bottom: 1rem;
 }
 
+.qb-features-header p {
+  font-size: 1rem;
+  color: #556070;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .qb-features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -244,18 +278,24 @@
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid #dde4ee;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.qb-feature-card.blue {
+.qb-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.qb-feature-card.blue-border {
   border-left: 4px solid #2f82ff;
 }
 
-.qb-feature-card.pink {
+.qb-feature-card.pink-border {
   border-left: 4px solid #ff5ea6;
 }
 
-.qb-feature-card.teal {
-  border-left: 4px solid #0fa783;
+.qb-feature-card.teal-border {
+  border-left: 4px solid #1e4a7a;
 }
 
 .qb-feature-card h3 {
@@ -272,20 +312,33 @@
   margin-bottom: 1.5rem;
 }
 
-.qb-feature-img {
+.qb-feature-image {
   width: 100%;
   height: 200px;
-  background: #eef3fa;
   border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #8290a5;
+  overflow: hidden;
 }
 
-/* EFFECT SECTION */
+.qb-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.qb-feature-card:hover .qb-feature-image img {
+  transform: scale(1.05);
+}
+
+.qb-cta-center {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Effect Section */
 .qb-effect {
   padding: 5rem 0;
+  background: #f3f7fb;
 }
 
 .qb-effect-content {
@@ -319,6 +372,11 @@
   padding: 1.5rem;
   border-radius: 12px;
   text-align: left;
+  transition: transform 0.3s;
+}
+
+.qb-stat-card:hover {
+  transform: scale(1.05);
 }
 
 .qb-stat-card.blue {
@@ -341,20 +399,48 @@
   margin-bottom: 0.75rem;
 }
 
+.qb-stat-icon.blue {
+  color: #2f82ff;
+}
+
+.qb-stat-icon.green {
+  color: #0f9c5b;
+}
+
+.qb-stat-icon.orange {
+  color: #ff8a30;
+}
+
+.qb-stat-icon.purple {
+  color: #8d4cff;
+}
+
 .qb-stat-card span {
   font-size: 0.9rem;
   color: #6c7482;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 .qb-stat-card strong {
   font-size: 1.75rem;
   color: #1f2a44;
+  display: block;
+  font-weight: 700;
 }
 
-/* TESTIMONIAL */
+.qb-stats-note {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6c7482;
+  margin-top: 0.5rem;
+}
+
+/* Testimonial */
 .qb-testimonial {
   padding: 5rem 0;
-  background: #f3f7fb;
+  background: white;
 }
 
 .qb-testimonial h2 {
@@ -375,23 +461,54 @@
   max-width: 900px;
   margin: 0 auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid #dde4ee;
 }
 
-.qb-testimonial-img {
+.qb-testimonial-image {
   width: 180px;
   height: 220px;
-  background: #e6eef7;
   border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.qb-quote {
+.qb-person-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qb-testimonial-play {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  background: #1e4a7a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 74, 122, 0.3);
+  transition: transform 0.3s;
+}
+
+.qb-testimonial-play:hover {
+  transform: scale(1.1);
+}
+
+.qb-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qb-quote-icon {
   color: #1e4a7a;
   margin-bottom: 1rem;
 }
-
 
 .qb-testimonial blockquote {
   font-size: 1.25rem;
@@ -403,6 +520,7 @@
 .qb-testimonial-author {
   font-weight: 600;
   color: #1f2a44;
+  margin-bottom: 0.25rem;
 }
 
 .qb-testimonial-role {
@@ -413,6 +531,7 @@
 /* FAQ */
 .qb-faq {
   padding: 5rem 0;
+  background: #f3f7fb;
 }
 
 .qb-faq h2 {
@@ -420,6 +539,7 @@
   font-size: 2.3rem;
   color: #1f2a44;
   margin-bottom: 3rem;
+  font-weight: 700;
 }
 
 .qb-faq-grid {
@@ -433,6 +553,11 @@
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid #d9e2ef;
+  transition: box-shadow 0.3s;
+}
+
+.qb-faq-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .qb-faq-question {
@@ -440,6 +565,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .qb-faq-question h4 {
@@ -449,8 +575,10 @@
 }
 
 .qb-arrow {
-  transition: 0.3s;
+  transition: transform 0.3s;
   color: #8b97a8;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .qb-arrow.open {
@@ -462,12 +590,13 @@
   color: #5c6677;
   margin-top: 1rem;
   line-height: 1.6;
+  overflow: hidden;
 }
 
-/* EXPLORE MORE */
+/* Explore More */
 .qb-explore {
   padding: 5rem 0;
-  background: #f3f7fb;
+  background: white;
 }
 
 .qb-explore-header {
@@ -479,6 +608,12 @@
   font-size: 2.25rem;
   color: #1f2a44;
   font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.qb-explore-header p {
+  font-size: 1rem;
+  color: #556070;
 }
 
 .qb-explore-grid {
@@ -497,7 +632,7 @@
   gap: 1rem;
   text-decoration: none;
   color: #1f2a44;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .qb-explore-card:hover {
@@ -506,7 +641,7 @@
 }
 
 .qb-explore-card.hot {
-  background: #1f2a44;
+  background: #1e4a7a;
   color: white;
 }
 
@@ -517,6 +652,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .qb-explore-icon.blue {
@@ -530,8 +666,8 @@
 }
 
 .qb-explore-icon.teal {
-  background: #d7f6f0;
-  color: #0fa783;
+  background: rgba(30, 74, 122, 0.1);
+  color: #1e4a7a;
 }
 
 .qb-explore-icon.purple {
@@ -549,7 +685,17 @@
   color: #ff8a30;
 }
 
-/* RESPONSIVE */
+.qb-explore-card.hot .qb-explore-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.qb-explore-card span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
   .qb-hero-content {
     grid-template-columns: 1fr;
@@ -569,6 +715,10 @@
   .qb-explore-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .qb-stats-note {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -585,49 +735,11 @@
     text-align: center;
   }
 
+  .qb-testimonial-image {
+    margin: 0 auto;
+  }
+
   .qb-explore-grid {
     grid-template-columns: 1fr;
   }
-}
-/* BUTTON WITH ARROW */
-.qb-btn-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.qb-btn-icon {
-  font-size: 1.1rem;
-  transition: transform 0.3s ease;
-}
-
-/* Hover animation like DoorLoop */
-.qb-btn-arrow:hover .qb-btn-icon {
-  transform: translateX(4px);
-}
-/* ================================
-   BANK SYNC – PRIMARY CTA BUTTON
-   ================================ */
-
-.bank-sync-cta-btn {
-  background-color: #1e4a7a;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.25s ease, transform 0.2s ease;
-}
-
-.bank-sync-cta-btn:hover {
-  background-color: #163a60; /* darker shade */
-}
-
-.bank-sync-cta-btn:active {
-  transform: translateY(1px);
 }

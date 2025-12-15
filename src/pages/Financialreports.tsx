@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   TrendingUp, BarChart3, PieChart, LineChart, ArrowRight, ChevronDown, 
   MapPin, Home, DollarSign, Calendar, Download, Filter, 
-  FileText, Activity, Target, Briefcase, Users, Building2
+  FileText, Activity, Target, Briefcase, Users, Building2, Play
 } from 'lucide-react';
-import '@/styles/Financialreports.css';
+import '@/styles/FinancialReports.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -25,13 +26,14 @@ const FinancialReports = () => {
   return (
     <div className="financial-reports-page">
       <Navbar/>
+      
       {/* Hero Section */}
       <section className="reports-hero">
         <div className="reports-container">
           <div className="reports-breadcrumb">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             <span>|</span>
-            <a href="/features">Features</a>
+            <Link to="/features">Features</Link>
             <span>|</span>
             <span>Financial Reports</span>
           </div>
@@ -79,28 +81,32 @@ const FinancialReports = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="reports-preview-card">
-                <div className="reports-preview-header">
-                  <h3>Market Analytics Dashboard</h3>
-                  <span className="reports-preview-badge">Live Data</span>
-                </div>
-                <div className="reports-preview-stats">
-                  <div className="preview-stat">
-                    <TrendingUp size={24} className="stat-icon green" />
-                    <div>
-                      <span className="stat-label">Avg Price Growth</span>
-                      <strong className="stat-value">+12.5%</strong>
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" 
+                  alt="Analytics Dashboard"
+                  className="reports-bg-image"
+                />
+                <div className="reports-preview-overlay">
+                  <div className="reports-preview-header">
+                    <h3>Market Analytics Dashboard</h3>
+                    <span className="reports-preview-badge">Live Data</span>
+                  </div>
+                  <div className="reports-preview-stats">
+                    <div className="preview-stat">
+                      <TrendingUp size={24} className="stat-icon green" />
+                      <div>
+                        <span className="stat-label">Avg Price Growth</span>
+                        <strong className="stat-value">+12.5%</strong>
+                      </div>
+                    </div>
+                    <div className="preview-stat">
+                      <Home size={24} className="stat-icon blue" />
+                      <div>
+                        <span className="stat-label">Active Listings</span>
+                        <strong className="stat-value">15,234</strong>
+                      </div>
                     </div>
                   </div>
-                  <div className="preview-stat">
-                    <Home size={24} className="stat-icon blue" />
-                    <div>
-                      <span className="stat-label">Active Listings</span>
-                      <strong className="stat-value">15,234</strong>
-                    </div>
-                  </div>
-                </div>
-                <div className="reports-preview-chart">
-                  <BarChart3 size={120} className="chart-placeholder" />
                 </div>
               </div>
             </motion.div>
@@ -186,19 +192,16 @@ const FinancialReports = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="feature-icon-wrapper">
-                <LineChart size={32} className="feature-main-icon blue" />
-              </div>
               <h3>Price trend analysis</h3>
               <p>
                 Track historical price movements, identify appreciation patterns, and forecast 
                 future trends using advanced statistical models and MLS historical data.
               </p>
               <div className="reports-feature-image">
-                <div className="feature-visual-demo">
-                  <LineChart size={60} />
-                  <span>Interactive Charts</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" 
+                  alt="Price trend charts"
+                />
               </div>
             </motion.div>
             
@@ -209,19 +212,16 @@ const FinancialReports = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="feature-icon-wrapper">
-                <MapPin size={32} className="feature-main-icon teal" />
-              </div>
               <h3>Neighborhood comparisons</h3>
               <p>
                 Compare multiple areas side-by-side. Analyze demographics, school ratings, 
                 crime statistics, and market velocities to identify investment opportunities.
               </p>
               <div className="reports-feature-image">
-                <div className="feature-visual-demo">
-                  <MapPin size={60} />
-                  <span>Geographic Analytics</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=600&h=400&fit=crop" 
+                  alt="Neighborhood maps"
+                />
               </div>
             </motion.div>
             
@@ -232,19 +232,16 @@ const FinancialReports = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="feature-icon-wrapper">
-                <PieChart size={32} className="feature-main-icon purple" />
-              </div>
               <h3>Investment portfolio tracking</h3>
               <p>
                 Monitor your property portfolio's performance, calculate ROI, track equity 
                 growth, and generate investor reports with detailed financial breakdowns.
               </p>
               <div className="reports-feature-image">
-                <div className="feature-visual-demo">
-                  <PieChart size={60} />
-                  <span>Portfolio Overview</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=400&fit=crop" 
+                  alt="Portfolio dashboard"
+                />
               </div>
             </motion.div>
             
@@ -255,19 +252,16 @@ const FinancialReports = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="feature-icon-wrapper">
-                <Activity size={32} className="feature-main-icon orange" />
-              </div>
               <h3>Market velocity metrics</h3>
               <p>
                 Understand how quickly properties sell, average days on market, list-to-sale 
                 price ratios, and seasonal patterns across different property types.
               </p>
               <div className="reports-feature-image">
-                <div className="feature-visual-demo">
-                  <Activity size={60} />
-                  <span>Velocity Tracking</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&h=400&fit=crop" 
+                  alt="Market metrics"
+                />
               </div>
             </motion.div>
           </div>
@@ -354,8 +348,13 @@ const FinancialReports = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="reports-testimonial-image">
-              <div className="testimonial-avatar">
-                <Briefcase size={40} />
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" 
+                alt="Jennifer Chen"
+                className="reports-person-image"
+              />
+              <div className="reports-testimonial-play">
+                <Play size={20} fill="white" />
               </div>
             </div>
             
@@ -383,174 +382,59 @@ const FinancialReports = () => {
           <motion.h2 {...fadeInUp}>Frequently asked questions</motion.h2>
           
           <div className="reports-faq-grid">
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(0)}>
-                <h4>What types of reports are available?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 0 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 0 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    HomeNest offers over 40 different report types including market trend analysis, 
-                    comparative market analysis (CMA), neighborhood statistics, price-per-square-foot 
-                    reports, investment ROI calculators, days-on-market analysis, and custom portfolio 
-                    performance reports.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-            
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(1)}>
-                <h4>How current is the data?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 1 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 1 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    Our data is updated in real-time from MLS systems across Canada. New listings, 
-                    price changes, and sold data appear within minutes of being posted. Historical 
-                    data goes back 15+ years for comprehensive trend analysis.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-            
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(2)}>
-                <h4>Can I customize reports for my brand?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 2 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 2 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    Yes! Professional and Enterprise plans include white-label reporting with your 
-                    logo, brand colors, and custom messaging. You can also save report templates 
-                    for consistent branding across all client communications.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-            
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(3)}>
-                <h4>Which markets are covered?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 3 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 3 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    HomeNest covers all major Canadian markets including Toronto (GTA), Vancouver 
-                    (Greater Vancouver), Calgary, Edmonton, Ottawa, Montreal, and many smaller cities. 
-                    We integrate with provincial MLS systems for comprehensive coverage.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-            
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(4)}>
-                <h4>Can I export data to Excel or CSV?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 4 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 4 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    Absolutely! All reports can be exported to PDF for client presentations, Excel/CSV 
-                    for further analysis, or PowerPoint for adding to your own presentations. You can 
-                    also schedule automated report delivery via email.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
-            
-            <motion.div 
-              className="reports-faq-item"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-            >
-              <div className="reports-faq-question" onClick={() => toggleFaq(5)}>
-                <h4>Is there a mobile app for viewing reports?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 5 ? 'open' : ''}`} />
-              </div>
-              <AnimatePresence>
-                {openFaq === 5 && (
-                  <motion.p 
-                    className="reports-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    Yes! The HomeNestobile app (iOS and Android) gives you full access to all 
-                    reports, real-time market data, and analytics on the go. Generate and share 
-                    reports directly from your phone while showing properties.
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.div>
+            {[
+              {
+                q: "What types of reports are available?",
+                a: "HomeNest offers over 40 different report types including market trend analysis, comparative market analysis (CMA), neighborhood statistics, price-per-square-foot reports, investment ROI calculators, days-on-market analysis, and custom portfolio performance reports."
+              },
+              {
+                q: "How current is the data?",
+                a: "Our data is updated in real-time from MLS systems across Canada. New listings, price changes, and sold data appear within minutes of being posted. Historical data goes back 15+ years for comprehensive trend analysis."
+              },
+              {
+                q: "Can I customize reports for my brand?",
+                a: "Yes! Professional and Enterprise plans include white-label reporting with your logo, brand colors, and custom messaging. You can also save report templates for consistent branding across all client communications."
+              },
+              {
+                q: "Which markets are covered?",
+                a: "HomeNest covers all major Canadian markets including Toronto (GTA), Vancouver (Greater Vancouver), Calgary, Edmonton, Ottawa, Montreal, and many smaller cities. We integrate with provincial MLS systems for comprehensive coverage."
+              },
+              {
+                q: "Can I export data to Excel or CSV?",
+                a: "Absolutely! All reports can be exported to PDF for client presentations, Excel/CSV for further analysis, or PowerPoint for adding to your own presentations. You can also schedule automated report delivery via email."
+              },
+              {
+                q: "Is there a mobile app for viewing reports?",
+                a: "Yes! The HomeNest mobile app (iOS and Android) gives you full access to all reports, real-time market data, and analytics on the go. Generate and share reports directly from your phone while showing properties."
+              }
+            ].map((faq, index) => (
+              <motion.div 
+                key={index}
+                className="reports-faq-item"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+              >
+                <div className="reports-faq-question" onClick={() => toggleFaq(index)}>
+                  <h4>{faq.q}</h4>
+                  <ChevronDown size={20} className={`faq-arrow ${openFaq === index ? 'open' : ''}`} />
+                </div>
+                <AnimatePresence>
+                  {openFaq === index && (
+                    <motion.p 
+                      className="reports-faq-answer"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {faq.a}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -566,50 +450,51 @@ const FinancialReports = () => {
           </div>
           
           <div className="reports-explore-grid">
-            <a href="/features/property-search" className="reports-explore-card">
+            <Link to="/features/property-search" className="reports-explore-card">
               <div className="reports-explore-icon blue">
                 <Home size={24} />
               </div>
               <span>Property Search</span>
-            </a>
+            </Link>
             
-            <a href="/features/market-trends" className="reports-explore-card">
+            <Link to="/features/market-trends" className="reports-explore-card">
               <div className="reports-explore-icon teal">
                 <TrendingUp size={24} />
               </div>
               <span>Market Trends</span>
-            </a>
+            </Link>
             
-            <a href="/features/valuation-tools" className="reports-explore-card">
+            <Link to="/features/valuation-tools" className="reports-explore-card">
               <div className="reports-explore-icon purple">
                 <DollarSign size={24} />
               </div>
               <span>Valuation Tools</span>
-            </a>
+            </Link>
             
-            <a href="/features/neighborhood-insights" className="reports-explore-card">
+            <Link to="/features/neighborhood-insights" className="reports-explore-card">
               <div className="reports-explore-icon orange">
                 <MapPin size={24} />
               </div>
               <span>Neighborhood Insights</span>
-            </a>
+            </Link>
             
-            <a href="/features/saved-searches" className="reports-explore-card">
+            <Link to="/features/saved-searches" className="reports-explore-card">
               <div className="reports-explore-icon green">
                 <Filter size={24} />
               </div>
               <span>Saved Searches</span>
-            </a>
+            </Link>
             
-            <a href="/features/alerts" className="reports-explore-card highlighted">
+            <Link to="/features/alerts" className="reports-explore-card highlighted">
               <div className="reports-explore-icon pink">
                 <FileText size={24} />
               </div>
               <span>Price Alerts</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
+      
       <Footer/>
     </div>
   );
