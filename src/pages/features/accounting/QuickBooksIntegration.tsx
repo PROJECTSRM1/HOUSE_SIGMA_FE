@@ -20,12 +20,9 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/styles/QuickBooksIntegration.css";
-import AuthModals from "@/components/AuthModals";
 
 const QuickBooksIntegration = () => {
-
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -39,13 +36,13 @@ const QuickBooksIntegration = () => {
   };
 
   return (
-    <div className="bank-sync-page">
+    <div className="qb-page">
       <Navbar />
 
       {/* HERO */}
-      <section className="bank-sync-hero">
-        <div className="bank-sync-container">
-          <div className="bank-sync-breadcrumb">
+      <section className="qb-hero">
+        <div className="qb-container">
+          <div className="qb-breadcrumb">
             <Link to="/">Home</Link>
             <span>|</span>
             <Link to="/features">Features</Link>
@@ -53,59 +50,60 @@ const QuickBooksIntegration = () => {
             <span>Accounting</span>
           </div>
 
-          <div className="bank-sync-hero-content">
+          <div className="qb-hero-content">
             <motion.div
-              className="bank-sync-hero-text"
+              className="qb-hero-text"
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1>Bookkeeping your way with YourBrand + QuickBooks</h1>
+              <h1>Bookkeeping your way with HomeNest + QuickBooks</h1>
               <p>
-                Connect YourBrand with QuickBooks Online for financial
+                Connect HomeNest with QuickBooks Online for financial
                 visibility, weekly time savings, and the flexibility to make
                 smarter decisions for your rental business.
               </p>
 
-              <div className="bank-sync-email-form">
+              <div className="qb-email-form">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="bank-sync-email-input"
+                  className="qb-email-input"
                 />
-                <button
-                  className="bank-sync-cta-btn"
-                
-                  >
+                <button className="qb-btn">
                   See It In Action
                 </button>
               </div>
 
-              <div className="bank-sync-rating">
-                <span className="bank-sync-rating-text">Rated 4.8+ out of 5</span>
-                <div className="bank-sync-stars">
+              <div className="qb-rating">
+                <span className="qb-rating-text">Rated 4.8+ out of 5</span>
+                <div className="qb-stars">
                   {[...Array(5)].map((_, i) => (
                     <span key={i}>★</span>
                   ))}
                 </div>
-                <div className="bank-sync-capterra">
+                <div className="qb-capterra">
                   Based on 700+ reviews on <strong>Capterra</strong>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              className="bank-sync-hero-video"
+              className="qb-hero-video"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="bank-sync-video-placeholder">
-                <h3>QuickBooks Sync</h3>
-                <p>One-click sync with QuickBooks Online</p>
+              <div className="qb-video-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop" 
+                  alt="QuickBooks Integration" 
+                  className="qb-bg-image"
+                />
+                <div className="qb-video-overlay">
+                  <div className="qb-play-btn">
 
-                <div className="bank-sync-play-btn" title="Play demo">
-                  <Play size={28} fill="white" />
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -114,19 +112,19 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* WHY */}
-      <section className="bank-sync-why">
-        <div className="bank-sync-container">
+      <section className="qb-why">
+        <div className="qb-container">
           <motion.h2 {...fadeInUp}>Why HomeNest</motion.h2>
 
-          <div className="bank-sync-why-grid">
+          <div className="qb-why-grid">
             <motion.div
-              className="bank-sync-why-card"
+              className="qb-why-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
             >
-              <div className="bank-sync-why-icon blue">
+              <div className="qb-why-icon blue">
                 <Calculator size={28} />
               </div>
               <h3>Surprisingly simple</h3>
@@ -137,13 +135,13 @@ const QuickBooksIntegration = () => {
             </motion.div>
 
             <motion.div
-              className="bank-sync-why-card"
+              className="qb-why-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: 0.08 }}
             >
-              <div className="bank-sync-why-icon pink">
+              <div className="qb-why-icon pink">
                 <FileText size={28} />
               </div>
               <h3>Secure & trusted</h3>
@@ -154,13 +152,13 @@ const QuickBooksIntegration = () => {
             </motion.div>
 
             <motion.div
-              className="bank-sync-why-card"
+              className="qb-why-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: 0.16 }}
             >
-              <div className="bank-sync-why-icon teal">
+              <div className="qb-why-icon teal">
                 <Home size={28} />
               </div>
               <h3>Built for growth</h3>
@@ -174,9 +172,9 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* FEATURES GRID */}
-      <section className="bank-sync-features">
-        <div className="bank-sync-container">
-          <div className="bank-sync-features-header">
+      <section className="qb-features">
+        <div className="qb-container">
+          <div className="qb-features-header">
             <motion.h2 {...fadeInUp}>
               The accounting integration property managers love
             </motion.h2>
@@ -186,9 +184,9 @@ const QuickBooksIntegration = () => {
             </motion.p>
           </div>
 
-          <div className="bank-sync-features-grid">
+          <div className="qb-features-grid">
             <motion.div
-              className="bank-sync-feature-card pink-border"
+              className="qb-feature-card pink-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -196,16 +194,19 @@ const QuickBooksIntegration = () => {
             >
               <h3>One-click sync</h3>
               <p>
-                Instantly connect bookkeeping data between YourBrand and
+                Instantly connect bookkeeping data between HomeNest and
                 QuickBooks Online — no spreadsheets, no double entry.
               </p>
-              <div className="bank-sync-feature-image">
-                [One-click sync mockup]
+              <div className="qb-feature-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                  alt="One-click sync dashboard"
+                />
               </div>
             </motion.div>
 
             <motion.div
-              className="bank-sync-feature-card blue-border"
+              className="qb-feature-card blue-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -216,13 +217,16 @@ const QuickBooksIntegration = () => {
                 Export reports, grant accountant access, and keep your records
                 accurate with minimal effort.
               </p>
-              <div className="bank-sync-feature-image">
-                [Tax & reports mockup]
+              <div className="qb-feature-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop" 
+                  alt="Tax reports and documents"
+                />
               </div>
             </motion.div>
 
             <motion.div
-              className="bank-sync-feature-card blue-border"
+              className="qb-feature-card blue-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -231,13 +235,18 @@ const QuickBooksIntegration = () => {
               <h3>Faster data entry</h3>
               <p>
                 Transactions, payments, and adjustments flow between QuickBooks
-                and YourBrand automatically — less manual work.
+                and HomeNest automatically — less manual work.
               </p>
-              <div className="bank-sync-feature-image">[Faster entry mockup]</div>
+              <div className="qb-feature-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                  alt="Automated data entry"
+                />
+              </div>
             </motion.div>
 
             <motion.div
-              className="bank-sync-feature-card teal-border"
+              className="qb-feature-card teal-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -248,15 +257,17 @@ const QuickBooksIntegration = () => {
                 Pull, categorize, and reconcile transactions from your bank or
                 credit card with bank sync powered by Plaid.
               </p>
-              <div className="bank-sync-feature-image">[Bank sync mockup]</div>
+              <div className="qb-feature-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" 
+                  alt="Bank synchronization"
+                />
+              </div>
             </motion.div>
           </div>
 
-          <div className="bank-sync-cta-center" style={{ marginTop: 24 }}>
-            <button
-              className="bank-sync-cta-btn"
-           
-            >
+          <div className="qb-cta-center">
+            <button className="qb-btn">
               See It In Action <ArrowRight size={18} />
             </button>
           </div>
@@ -264,11 +275,11 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* EFFECT */}
-      <section className="bank-sync-effect">
-        <div className="bank-sync-container">
-          <div className="bank-sync-effect-content">
+      <section className="qb-effect">
+        <div className="qb-container">
+          <div className="qb-effect-content">
             <motion.div
-              className="bank-sync-effect-text"
+              className="qb-effect-text"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -279,47 +290,44 @@ const QuickBooksIntegration = () => {
                 Delivering the features you need with the results you've been
                 waiting for. Now that's smarter property management.
               </p>
-              <button
-                className="bank-sync-cta-btn"
-            
-              >
+              <button className="qb-btn">
                 See It In Action <ArrowRight size={18} />
               </button>
             </motion.div>
 
             <motion.div
-              className="bank-sync-stats-grid"
+              className="qb-stats-grid"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: 0.12 }}
             >
-              <div className="bank-sync-stat-card blue">
-                <CheckCircle className="bank-sync-stat-icon blue" size={32} />
+              <div className="qb-stat-card blue">
+                <CheckCircle className="qb-stat-icon blue" size={32} />
                 <span>On-Time Payments</span>
                 <strong>88%</strong>
               </div>
 
-              <div className="bank-sync-stat-card orange">
-                <Clock className="bank-sync-stat-icon orange" size={32} />
+              <div className="qb-stat-card orange">
+                <Clock className="qb-stat-icon orange" size={32} />
                 <span>Time Saved</span>
                 <strong>23hrs/mo</strong>
               </div>
 
-              <div className="bank-sync-stat-card green">
-                <TrendingUp className="bank-sync-stat-icon green" size={32} />
+              <div className="qb-stat-card green">
+                <TrendingUp className="qb-stat-icon green" size={32} />
                 <span>Increased Occupancy</span>
                 <strong>96%</strong>
               </div>
 
-              <div className="bank-sync-stat-card purple">
-                <Users className="bank-sync-stat-icon purple" size={32} />
+              <div className="qb-stat-card purple">
+                <Users className="qb-stat-icon purple" size={32} />
                 <span>Tenant Requests Automatically Handled</span>
                 <strong>Over 50%</strong>
               </div>
 
-              <p className="bank-sync-stats-note">
-                Based on YourBrand user surveys. Results may vary.
+              <p className="qb-stats-note">
+                Based on HomeNest user surveys. Results may vary.
               </p>
             </motion.div>
           </div>
@@ -327,43 +335,42 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="bank-sync-testimonial">
-        <div className="bank-sync-container">
-          <motion.h2
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-          >
+      <section className="qb-testimonial">
+        <div className="qb-container">
+          <motion.h2 {...fadeInUp}>
             Hear from our customers
           </motion.h2>
 
           <motion.div
-            className="bank-sync-testimonial-card"
+            className="qb-testimonial-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: 0.06 }}
           >
-            <div className="bank-sync-testimonial-image">
-              {/* replace with real thumbnail if available */}
-              <div className="bank-sync-testimonial-play">
+            <div className="qb-testimonial-image">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" 
+                alt="Harrison Furman"
+                className="qb-person-image"
+              />
+              <div className="qb-testimonial-play">
                 <Play size={20} fill="white" />
               </div>
             </div>
 
-            <div className="bank-sync-testimonial-content">
-              <div className="bank-sync-quote-icon">
+            <div className="qb-testimonial-content">
+              <div className="qb-quote-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
               </div>
               <blockquote>
-                I used QuickBooks with YourBrand and found syncing to be painless —
+                I used QuickBooks with HomeNest and found syncing to be painless —
                 the bookkeeping was simpler and the monthly close faster.
               </blockquote>
-              <p className="bank-sync-testimonial-author">Harrison Furman</p>
-              <p className="bank-sync-testimonial-role">
+              <p className="qb-testimonial-author">Harrison Furman</p>
+              <p className="qb-testimonial-role">
                 Property Manager, Greenwave Capital
               </p>
             </div>
@@ -372,71 +379,41 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* FAQ */}
-      <section className="bank-sync-faq">
-        <div className="bank-sync-container">
+      <section className="qb-faq">
+        <div className="qb-container">
           <motion.h2 {...fadeInUp}>Your questions answered</motion.h2>
 
-          <div className="bank-sync-faq-grid">
-            {/* FAQ item 0 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(0)}
-                role="button"
-              >
+          <div className="qb-faq-grid">
+            <motion.div className="qb-faq-item" {...fadeInUp}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(0)}>
                 <h4>Is QuickBooks a property management software?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 0 ? "open" : ""}`} />
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 0 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 0 && (
                   <motion.p
-                    className="bank-sync-faq-answer"
+                    className="qb-faq-answer"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.28 }}
                   >
                     QuickBooks handles accounting — but it's not built specifically for
-                    property operations at scale. YourBrand fills the gaps and syncs to
+                    property operations at scale. HomeNest fills the gaps and syncs to
                     QuickBooks to keep books accurate.
                   </motion.p>
                 )}
               </AnimatePresence>
             </motion.div>
 
-            {/* FAQ item 1 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36, delay: 0.06 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(1)}
-                role="button"
-              >
+            <motion.div className="qb-faq-item" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.36, delay: 0.06 }}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(1)}>
                 <h4>What are the benefits of a QuickBooks integration?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 1 ? "open" : ""}`} />
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 1 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 1 && (
-                  <motion.p
-                    className="bank-sync-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.28 }}
-                  >
+                  <motion.p className="qb-faq-answer" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.28 }}>
                     Syncing saves time, reduces errors, and gives accountants easy access
                     to exportable reports and reconciled transactions.
                   </motion.p>
@@ -444,65 +421,29 @@ const QuickBooksIntegration = () => {
               </AnimatePresence>
             </motion.div>
 
-            {/* FAQ item 2 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36, delay: 0.12 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(2)}
-                role="button"
-              >
+            <motion.div className="qb-faq-item" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.36, delay: 0.12 }}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(2)}>
                 <h4>Is it a one-way sync?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 2 ? "open" : ""}`} />
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 2 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 2 && (
-                  <motion.p
-                    className="bank-sync-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.28 }}
-                  >
-                    Yes — the sync from YourBrand to QuickBooks is one-way per company,
+                  <motion.p className="qb-faq-answer" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.28 }}>
+                    Yes — the sync from HomeNest to QuickBooks is one-way per company,
                     ensuring a consistent accounting system in QuickBooks.
                   </motion.p>
                 )}
               </AnimatePresence>
             </motion.div>
 
-            {/* FAQ item 3 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36, delay: 0.18 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(3)}
-                role="button"
-              >
+            <motion.div className="qb-faq-item" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.36, delay: 0.18 }}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(3)}>
                 <h4>How do you avoid duplicate data in QuickBooks?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 3 ? "open" : ""}`} />
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 3 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 3 && (
-                  <motion.p
-                    className="bank-sync-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.28 }}
-                  >
+                  <motion.p className="qb-faq-answer" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.28 }}>
                     A start-date prevents the sync of historical data that already exists
                     in QuickBooks, avoiding duplicate entries.
                   </motion.p>
@@ -510,64 +451,28 @@ const QuickBooksIntegration = () => {
               </AnimatePresence>
             </motion.div>
 
-            {/* FAQ item 4 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36, delay: 0.24 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(4)}
-                role="button"
-              >
-                <h4>Which QuickBooks version does YourBrand sync with?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 4 ? "open" : ""}`} />
+            <motion.div className="qb-faq-item" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.36, delay: 0.24 }}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(4)}>
+                <h4>Which QuickBooks version does HomeNest sync with?</h4>
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 4 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 4 && (
-                  <motion.p
-                    className="bank-sync-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.28 }}
-                  >
-                    YourBrand syncs with QuickBooks Online (QBO).
+                  <motion.p className="qb-faq-answer" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.28 }}>
+                    HomeNest syncs with QuickBooks Online (QBO).
                   </motion.p>
                 )}
               </AnimatePresence>
             </motion.div>
 
-            {/* FAQ item 5 */}
-            <motion.div
-              className="bank-sync-faq-item"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.36, delay: 0.30 }}
-            >
-              <div
-                className="bank-sync-faq-question"
-                onClick={() => toggleFaq(5)}
-                role="button"
-              >
+            <motion.div className="qb-faq-item" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.36, delay: 0.30 }}>
+              <div className="qb-faq-question" onClick={() => toggleFaq(5)}>
                 <h4>Do I need to map fields to QuickBooks?</h4>
-                <ChevronDown size={20} className={`faq-arrow ${openFaq === 5 ? "open" : ""}`} />
+                <ChevronDown size={20} className={`qb-arrow ${openFaq === 5 ? "open" : ""}`} />
               </div>
-
               <AnimatePresence>
                 {openFaq === 5 && (
-                  <motion.p
-                    className="bank-sync-faq-answer"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.28 }}
-                  >
+                  <motion.p className="qb-faq-answer" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.28 }}>
                     No — we provide sensible default mappings (properties → customers,
                     leases → jobs/sub-customers) and you can tweak them in settings.
                   </motion.p>
@@ -579,9 +484,9 @@ const QuickBooksIntegration = () => {
       </section>
 
       {/* EXPLORE MORE FEATURES */}
-      <section className="bank-sync-explore">
-        <div className="bank-sync-container">
-          <div className="bank-sync-explore-header">
+      <section className="qb-explore">
+        <div className="qb-container">
+          <div className="qb-explore-header">
             <motion.h2 {...fadeInUp}>Explore more features</motion.h2>
             <motion.p {...fadeInUp}>
               Discover additional tools and features that can streamline your
@@ -589,44 +494,44 @@ const QuickBooksIntegration = () => {
             </motion.p>
           </div>
 
-          <div className="bank-sync-explore-grid">
-            <Link to="/features/accounting" className="bank-sync-explore-card">
-              <div className="bank-sync-explore-icon blue">
+          <div className="qb-explore-grid">
+            <Link to="/features/accounting" className="qb-explore-card">
+              <div className="qb-explore-icon blue">
                 <Calculator size={24} />
               </div>
               <span>Accounting</span>
             </Link>
 
-            <Link to="/features/leasing" className="bank-sync-explore-card">
-              <div className="bank-sync-explore-icon teal">
+            <Link to="/features/leasing" className="qb-explore-card">
+              <div className="qb-explore-icon teal">
                 <Home size={24} />
               </div>
               <span>Leasing</span>
             </Link>
 
-            <Link to="/features/resident-experience" className="bank-sync-explore-card">
-              <div className="bank-sync-explore-icon purple">
+            <Link to="/features/resident-experience" className="qb-explore-card">
+              <div className="qb-explore-icon purple">
                 <FileText size={24} />
               </div>
               <span>Resident Experience</span>
             </Link>
 
-            <Link to="/features/operations" className="bank-sync-explore-card">
-              <div className="bank-sync-explore-icon pink">
+            <Link to="/features/operations" className="qb-explore-card">
+              <div className="qb-explore-icon pink">
                 <MessageSquare size={24} />
               </div>
               <span>Operations</span>
             </Link>
 
-            <Link to="/features/rent-collection" className="bank-sync-explore-card">
-              <div className="bank-sync-explore-icon green">
+            <Link to="/features/rent-collection" className="qb-explore-card">
+              <div className="qb-explore-icon green">
                 <DollarSign size={24} />
               </div>
               <span>Rent Collection</span>
             </Link>
 
-            <Link to="/features/ai-assistant" className="bank-sync-explore-card highlighted">
-              <div className="bank-sync-explore-icon orange">
+            <Link to="/features/ai-assistant" className="qb-explore-card hot">
+              <div className="qb-explore-icon orange">
                 <Sparkles size={24} />
               </div>
               <span>AI Assistant</span>
@@ -636,7 +541,6 @@ const QuickBooksIntegration = () => {
       </section>
 
       <Footer />
-     
     </div>
   );
 };

@@ -136,41 +136,29 @@
 .bookkeeping-video-placeholder {
   width: 100%;
   aspect-ratio: 16/10;
-  background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(220 50% 30%) 100%);
+  background:
+    url('https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  position: relative;
 }
 
 .bookkeeping-video-placeholder h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .bookkeeping-video-placeholder p {
   font-size: 1.25rem;
   opacity: 0.9;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.bookkeeping-play-btn {
-  width: 64px;
-  height: 64px;
-  background: #1e4a7a;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.bookkeeping-play-btn:hover {
-  transform: scale(1.1);
-}
 
 /* Why HomeNest Section */
 .bookkeeping-why {
@@ -307,14 +295,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #1e4a7a;
+  color: white;
   font-size: 0.875rem;
   gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.bookkeeping-feature-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bookkeeping-feature-image svg,
+.bookkeeping-feature-image span {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bookkeeping-feature-image.income-tracking {
+  background-image: url('https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bookkeeping-feature-image.commission-calc {
+  background-image: url('https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bookkeeping-feature-image.multi-property {
+  background-image: url('https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bookkeeping-feature-image.tax-tracking {
+  background-image: url('https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800');
 }
 
 .bookkeeping-feature-image span {
   font-weight: 600;
-  color: hsl(var(--navy));
+  color: white;
+  font-size: 1rem;
 }
 
 .bookkeeping-cta-center {
@@ -448,7 +471,9 @@
 .bookkeeping-testimonial-image {
   width: 180px;
   height: 220px;
-  background: hsl(210 40% 92%);
+  background:
+    linear-gradient(135deg, rgba(30, 74, 122, 0.3) 0%, rgba(34, 60, 80, 0.3) 100%),
+    url('https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400') center/cover;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -460,13 +485,20 @@
 .bookkeeping-testimonial-play {
   width: 48px;
   height: 48px;
-  background: #1e4a7a;
+  background: rgba(30, 74, 122, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bookkeeping-testimonial-play:hover {
+  transform: scale(1.1);
+  background: rgba(30, 74, 122, 1);
 }
 
 .bookkeeping-testimonial-content {

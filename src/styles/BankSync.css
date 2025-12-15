@@ -136,40 +136,27 @@
 .bank-sync-video-placeholder {
   width: 100%;
   aspect-ratio: 16/10;
-  background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(220 50% 30%) 100%);
+  background:
+    url('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  position: relative;
 }
 
 .bank-sync-video-placeholder h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .bank-sync-video-placeholder p {
   font-size: 1.25rem;
   opacity: 0.9;
-}
-
-.bank-sync-play-btn {
-  width: 64px;
-  height: 64px;
-  background: #1e4a7a;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.bank-sync-play-btn:hover {
-  transform: scale(1.1);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Why HomeNest Section */
@@ -306,25 +293,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: hsl(215 16% 60%);
+  color: white;
   font-size: 0.875rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
-.feature-icon {
-  opacity: 0.7;
+.bank-sync-feature-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ 
+  z-index: 1;
+}
+
+.bank-sync-feature-image.connect-bank {
+  background-image: url('https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bank-sync-feature-image.auto-match {
+  background-image: url('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bank-sync-feature-image.smart-cat {
+  background-image: url('https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.bank-sync-feature-image.cut-errors {
+  background-image: url('https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+/* .feature-icon {
+  opacity: 1;
 }
 
 .feature-icon.blue {
-  color: hsl(210 100% 50%);
+  color: white;
 }
 
 .feature-icon.pink {
-  color: hsl(330 80% 55%);
+  color: white;
 }
 
 .feature-icon.teal {
-  color: #1e4a7a;
-}
+  color: white;
+} */
 
 .bank-sync-cta-center {
   text-align: center;
@@ -464,7 +479,9 @@
 .bank-sync-testimonial-image {
   width: 180px;
   height: 220px;
-  background: hsl(210 40% 92%);
+  background:
+    linear-gradient(135deg, rgba(30, 74, 122, 0.3) 0%, rgba(34, 60, 80, 0.3) 100%),
+    url('https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400') center/cover;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -476,13 +493,20 @@
 .bank-sync-testimonial-play {
   width: 48px;
   height: 48px;
-  background: #1e4a7a;
+  background: rgba(30, 74, 122, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bank-sync-testimonial-play:hover {
+  transform: scale(1.1);
+  background: rgba(30, 74, 122, 1);
 }
 
 .bank-sync-testimonial-content {
@@ -555,6 +579,8 @@
 .faq-arrow {
   transition: transform 0.3s ease;
   color: hsl(215 16% 50%);
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .faq-arrow.open {
@@ -630,6 +656,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .bank-sync-explore-icon.blue {
