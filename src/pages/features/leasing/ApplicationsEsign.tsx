@@ -173,10 +173,22 @@ const ApplicationsEsign = () => {
                 <button>See It In Action</button>
               </div>
 
-              <div className="es-rating">
-                <span>Rated 4.8+ out of 5</span>
-                <span>Based on 700+ reviews on <strong>Capterra</strong></span>
-              </div>
+              <div className="list-rating">
+  <span className="list-rating-text">Rated 4.8+ out of 5</span>
+
+  <div className="list-stars" aria-hidden>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>☆</span>
+  </div>
+
+  <div className="list-capterra">
+    Based on 700+ reviews on <strong>Capterra</strong>
+  </div>
+</div>
+
             </div>
 
             <div className="es-hero-image">
@@ -264,7 +276,7 @@ const ApplicationsEsign = () => {
         See It In Action <ArrowRight size={16} />
       </button>
     </div>
-
+       
   </div>
 </section>
 
