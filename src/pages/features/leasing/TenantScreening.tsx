@@ -146,14 +146,22 @@ const TenantScreening = () => {
               />
               <button className="ts-hero-btn">See It In Action</button>
             </div>
-            <div className="ts-hero-rating">
-              <div className="ts-hero-stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" />
-                ))}
-              </div>
-              <span>4.8/5 based on 2,000+ reviews</span>
-            </div>
+            <div className="list-rating">
+  <span className="list-rating-text">Rated 4.8+ out of 5</span>
+
+  <div className="list-stars" aria-hidden>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>☆</span>
+  </div>
+
+  <div className="list-capterra">
+    Based on 700+ reviews on <strong>Capterra</strong>
+  </div>
+</div>
+
           </div>
           <div className="ts-hero-image">
             <img
@@ -165,7 +173,6 @@ const TenantScreening = () => {
       </section>
 
       {/* Why Section */}
-       {/* WHY HomeNest/}
 <section className="list-why">
   <div className="list-container">
     <h2>

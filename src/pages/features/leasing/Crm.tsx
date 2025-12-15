@@ -96,7 +96,7 @@ const faqData = [
       <Navbar />
 
       {/* HERO (CRM ONLY IMAGE DIFFERENT) */}
-      <section className="ts-hero">
+         <section className="ts-hero">
         <div className="ts-hero-container">
           <div>
             <div className="ts-breadcrumb">
@@ -125,13 +125,21 @@ const faqData = [
               <button className="ts-hero-btn">See It In Action</button>
             </div>
 
-            <div className="ts-hero-rating">
-              <div className="ts-hero-stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" />
-                ))}
+            {/* ✅ UPDATED REVIEWS – SAME AS APPLICATIONS ESIGN */}
+            <div className="list-rating">
+              <span className="list-rating-text">Rated 4.8+ out of 5</span>
+
+              <div className="list-stars" aria-hidden>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>☆</span>
               </div>
-              <span>4.8/5 based on 700+ reviews</span>
+
+              <div className="list-capterra">
+                Based on 700+ reviews on <strong>Capterra</strong>
+              </div>
             </div>
           </div>
 
@@ -143,7 +151,6 @@ const faqData = [
           </div>
         </div>
       </section>
-
       {/* WHY (SAME UI AS TENANT SCREENING) */}
        <section className="es-why">
   <div className="es-container">
