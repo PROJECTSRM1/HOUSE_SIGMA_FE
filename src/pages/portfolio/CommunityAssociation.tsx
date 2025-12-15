@@ -5,10 +5,11 @@ import {
   AccordionTrigger,
   AccordionContent
 } from "@/components/ui/accordion";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./CommunityAssociation.css";
+import { useNavigate } from "react-router-dom";
 
 /* HERO + FEATURE + GALLERY IMAGES */
 import img1 from '/assets/hero-community.jpg';
@@ -25,6 +26,16 @@ import img13 from '/assets/loan.webp';
 
 const CommunityAssociationPage: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState<any>(null);
+  const navigate = useNavigate();
+
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, []);
+  
 
   const FEATURES = [
     {
@@ -320,30 +331,39 @@ const CommunityAssociationPage: React.FC = () => {
       </section>
 
       {/* ================= PORTFOLIOS ================= */}
-      <section className="portfolio-section">
-        <span className="portfolio-label">EXPLORE MORE</span>
-        <h2 className="portfolio-title">Other Portfolios</h2>
+     <section className="portfolio-section">
+  <span className="portfolio-label">EXPLORE MORE</span>
+  <h2 className="portfolio-title">Other Portfolios</h2>
 
-        <div className="portfolio-grid">
-          {[
-            "Residentials",
-            "Multifamily",
-            "Commercial",
-            "Community Association",
-            "Affordable Housing"
-          ].map((item) => (
-            <button
-              key={item}
-              className={`portfolio-pill ${
-                item === "Community Association" ? "active" : ""
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </section>
+  <div className="portfolio-grid">
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/residential")}
+    >
+      Residential
+    </button>
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/commercial")}
+    >
+      Commercial
+    </button>
 
+    <button
+      className="portfolio-pill active"
+      onClick={() => navigate("/portfolio/community")}
+    >
+      Community Association
+    </button>
+
+    <button
+      className="portfolio-pill"
+      onClick={() => navigate("/portfolio/affordable")}
+    >
+      Affordable Housing
+    </button>
+  </div>
+</section>
       <Footer />
     </div>
   );
