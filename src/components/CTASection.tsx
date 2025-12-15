@@ -29,7 +29,7 @@ const CTASection = () => {
 
           <p className="cta-subtext">
             Join thousands of property managers who've streamlined their 
-            maintenance operations with House Sigma.
+            maintenance operations with Home Nest.
           </p>
 
           <div className="cta-input-group">
