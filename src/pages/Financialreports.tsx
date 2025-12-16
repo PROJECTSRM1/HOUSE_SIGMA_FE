@@ -6,7 +6,7 @@ import {
   MapPin, Home, DollarSign, Calendar, Download, Filter, 
   FileText, Activity, Target, Briefcase, Users, Building2, Play
 } from 'lucide-react';
-import '@/styles/FinancialReports.css';
+import '@/styles/Financialreports.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
